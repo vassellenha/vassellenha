@@ -1,17 +1,13 @@
-BLACKCHERRY / CCELL GitHub Profile README
+CCELL SAKURA — COMPLETE GITHUB PROFILE PACKAGE
 
 1. Extract this ZIP on your computer.
 2. Open https://github.com/vassellenha/vassellenha
-3. Choose Add file > Upload files.
-4. Upload README.md and the entire assets/ folder together, preserving names.
-5. Commit changes and visit https://github.com/vassellenha
+3. Upload README.md and the entire assets/ directory, preserving filenames and paths.
+4. Commit the changes.
+5. Open https://github.com/vassellenha and refresh.
 
-IMPORTANT
-- Upload the extracted files, not the ZIP itself.
-- The animated GIF is assets/ccell-sakura-terminal.gif.
-- GitHub does not support custom site-wide CSS/JavaScript backgrounds in README files.
-- Real interaction: section-jump links and expandable details; animation: GIF.
-- Static SVG development pulse is decorative, not a live contributions graph.
-- The GitHub streak widget is third-party and can occasionally fail; all other design assets are in this ZIP.
-- The portrait is an externally hosted promotional image; it may change or be removed by its hosting site.
-- No 'ASA BIAS', fan disclaimer, or visual-inspiration section.
+IMPORTANT: Do not upload the ZIP file itself. GitHub will not extract it.
+The animated hero is assets/ccell-hero.gif.
+The redesigned, centered icon workflow is assets/development-loop.svg.
+The About portrait is hosted by Sony Music, so it depends on that remote image remaining available.
+GitHub README HTML has limited layout control, so image placement may vary with viewport width.

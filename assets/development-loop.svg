@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="190" viewBox="0 0 1400 190"><defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#0E121C"/><stop offset=".5" stop-color="#20101E"/><stop offset="1" stop-color="#0E121C"/></linearGradient><linearGradient id="line" x1="0" x2="1"><stop stop-color="#E7B5CD"/><stop offset=".5" stop-color="#FF4C93"/><stop offset="1" stop-color="#E7B5CD"/></linearGradient></defs><rect width="1400" height="190" rx="14" fill="url(#bg)"/><rect x="1" y="1" width="1398" height="188" rx="13" fill="none" stroke="#663049" stroke-width="2"/><text x="36" y="43" font-size="19" font-weight="700" font-family="DejaVu Sans, sans-serif" fill="#FEB0D1">// THE DEVELOPMENT LOOP</text><text x="58" y="123" font-size="36" font-weight="700" font-family="DejaVu Sans, sans-serif" fill="#F4F4F7">DESIGN</text><text x="408" y="123" font-size="36" font-weight="700" font-family="DejaVu Sans, sans-serif" fill="#F4F4F7">BUILD</text><text x="741" y="123" font-size="36" font-weight="700" font-family="DejaVu Sans, sans-serif" fill="#F4F4F7">TEST</text><text x="1060" y="123" font-size="36" font-weight="700" font-family="DejaVu Sans, sans-serif" fill="#F4F4F7">SHIP</text><g stroke="url(#line)" stroke-width="4" fill="none"><path d="M262 112 H360"/><path d="M349 101 L360 112 L349 123"/><path d="M574 112 H690"/><path d="M679 101 L690 112 L679 123"/><path d="M875 112 H1012"/><path d="M1001 101 L1012 112 L1001 123"/></g><text x="36" y="163" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#AFA3B5">FULL-STACK DEVELOPMENT • INTERFACE ENGINEERING • SYSTEM THINKING</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="170" viewBox="0 0 1400 170">
+<defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#0E121C"/><stop offset=".5" stop-color="#20101E"/><stop offset="1" stop-color="#0E121C"/></linearGradient></defs>
+<rect width="1400" height="170" rx="14" fill="url(#bg)"/><rect x="1" y="1" width="1398" height="168" rx="13" fill="none" stroke="#663049" stroke-width="2"/>
+<g font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="31" fill="#F4F4F7" text-anchor="middle">
+<text x="205" y="107">DESIGN</text><text x="530" y="107">BUILD</text><text x="860" y="107">TEST</text><text x="1185" y="107">SHIP</text></g>
+<g fill="none" stroke="#FF5799" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<rect x="135" y="26" width="24" height="24" rx="5"/><path d="M140 38h14 M147 31v14"/>
+<path d="M521 30l-10 9 10 9 M539 30l10 9-10 9"/>
+<circle cx="858" cy="39" r="13"/><path d="M852 39l5 5 9-11"/>
+<path d="M1176 47v-19 M1168 36l8-8 8 8 M1161 49h30"/>
+<path d="M355 85h62m-12-10 12 10-12 10 M683 85h62m-12-10 12 10-12 10 M1013 85h62m-12-10 12 10-12 10"/>
+</g></svg>
