@@ -1,4 +1,6 @@
 <!-- CCELL / BLACK CHERRY SAKURA — GitHub Profile README -->
+<!-- psst: the torii near the bottom is a real 3D model. drag it. -->
+<a id="top"></a>
 <div align="center">
 
 <a href="https://github.com/vassellenha"><img src="./assets/ccell-hero.gif" width="100%" alt="CCELL — Vassell Enha Atthayya, animated cyber-sakura portfolio header" /></a>
@@ -18,7 +20,18 @@
 <a href="https://www.linkedin.com/in/vassell-enha-atthayya-182661323"><img src="https://img.shields.io/badge/LinkedIn-111520?style=flat-square&logo=linkedin&logoColor=F84586" alt="LinkedIn" /></a>
 <a href="https://instagram.com/vassellenha"><img src="https://img.shields.io/badge/Instagram-111520?style=flat-square&logo=instagram&logoColor=F84586" alt="Instagram" /></a>
 
+<br /><br />
+
+<img src="./assets/typing-roles.svg" width="100%" alt="ccell@sakura:~$ Full-Stack Developer, UI/UX Interface Designer, Laravel + React + Vue Builder, Cloud and Docker Explorer, Roblox and Lua Game Developer" />
+
+<br />
+
+<img src="https://komarev.com/ghpvc/?username=vassellenha&label=PROFILE+VIEWS&color=F84586&style=for-the-badge&labelColor=111520" alt="Profile views" />
+<img src="https://img.shields.io/github/followers/vassellenha?label=FOLLOWERS&style=for-the-badge&logo=github&logoColor=F84586&labelColor=111520&color=F84586" alt="GitHub followers" />
+
 </div>
+
+<img src="./assets/divider-petals.svg" width="100%" alt="" />
 
 <a id="about"></a>
 <img src="./assets/section-01.svg" width="100%" alt="01 / ABOUT ME" />
@@ -45,10 +58,77 @@
 
 </td></tr></table>
 
+<br />
+
+<div align="center">
+
+<img src="./assets/terminal-whoami.svg" width="88%" alt="Terminal: whoami. ccell, Vassell Enha Atthayya. Information Systems at Telkom University. Building BRREAD!, learning Docker, cloud, Vue.js and Lua. Open to full-stack, UI/UX and game-dev collaborations. Languages: Bahasa Indonesia and English. Motto: from the database to the deploy." />
+
+<br /><br />
+
+<img src="./assets/trophy-case.svg" width="100%" alt="Beyond code: national achievements in business model canvas and business proposal competitions, 2026" />
+
+</div>
+
+<br />
+
+<div align="center"><b>[ PICK YOUR PATH ]</b> &nbsp;·&nbsp; <sub>click a card to expand it</sub></div>
+
+<table>
+<tr>
+<td width="33%" valign="top">
+<details>
+<summary><b>[ HIRING / SUPERVISING ]</b></summary>
+<br />
+Full-stack delivery from schema to deploy, with the interface design to match.
+<br /><br />
+<code>Laravel</code> <code>PHP</code> <code>MySQL</code> back ends<br />
+<code>React</code> <code>Vue.js</code> front ends<br />
+<code>RBAC</code> <code>SLA workflows</code> <code>REST APIs</code><br />
+<code>Figma</code> component systems and user flows
+<br /><br />
+<a href="#work"><b>Selected work</b></a> · <a href="https://www.linkedin.com/in/vassell-enha-atthayya-182661323"><b>LinkedIn</b></a> · <a href="https://websiteportofoliokelompok5.vercel.app/"><b>Portfolio</b></a>
+</details>
+</td>
+<td width="33%" valign="top">
+<details>
+<summary><b>[ COLLABORATING ]</b></summary>
+<br />
+Open to full-stack, UI/UX and game-development collaborations.
+<br /><br />
+Working on a meaningful web application or a collaborative build? Let's talk.
+<br /><br />
+<a href="#connect"><b>Connect</b></a> · <a href="https://www.linkedin.com/in/vassell-enha-atthayya-182661323"><b>LinkedIn</b></a> · <a href="https://instagram.com/vassellenha"><b>Instagram</b></a>
+</details>
+</td>
+<td width="33%" valign="top">
+<details>
+<summary><b>[ GAME DEV / ROBLOX ]</b></summary>
+<br />
+<b>Catch &amp; Clash</b> is my Roblox project: Lua-based gameplay systems built in Roblox Studio.
+<br /><br />
+Still learning Lua and Roblox Studio, and happy to team up on game builds.
+<br /><br />
+<a href="https://github.com/vassellenha/CatchAndClash_Roblox_Project"><b>Open the repository</b></a>
+</details>
+</td>
+</tr>
+</table>
+
+<div align="right"><a href="#top"><img src="https://img.shields.io/badge/%E2%86%91_BACK_TO_TOP-111520?style=flat-square&labelColor=F84586&color=111520" alt="Back to top" /></a></div>
+
+<img src="./assets/divider-petals.svg" width="100%" alt="" />
+
+<img src="./assets/interlude-deploy.svg" width="100%" alt="From the database to the deploy. Idea, working product, every layer understood." />
+
 <a id="toolkit"></a>
 <img src="./assets/section-02.svg" width="100%" alt="02 / TOOLKIT" />
 
 <div align="center">
+
+<img src="./assets/stack-orbit.svg" width="100%" alt="Animated stack orbit. Inner orbit: HTML, CSS, JS, TS, React, Vue, Tailwind, Figma. Middle orbit: PHP, Laravel, Node.js, MySQL, Python, REST API, RBAC. Outer orbit: Git, GitHub, Postman, VS Code, plus Docker, Cloud, Lua and Roblox that I am exploring." />
+
+<br /><br />
 
 **FRONTEND & INTERFACE**
 
@@ -73,6 +153,10 @@
 
 </details>
 
+<div align="right"><a href="#top"><img src="https://img.shields.io/badge/%E2%86%91_BACK_TO_TOP-111520?style=flat-square&labelColor=F84586&color=111520" alt="Back to top" /></a></div>
+
+<img src="./assets/divider-petals.svg" width="100%" alt="" />
+
 <a id="work"></a>
 <img src="./assets/section-03.svg" width="100%" alt="03 / SELECTED WORK" />
 
@@ -95,15 +179,53 @@
 </td>
 </tr></table>
 
-<details><summary><b>More projects — Vue Lab, AMANIN, PHARVIA</b></summary>
+<table><tr>
+<td width="50%" valign="top">
+<a href="https://github.com/vassellenha/AMANIN-Project"><img src="./assets/project-amanin.svg" width="100%" alt="AMANIN — AI-assisted anti-scam decision assistant concept" /></a>
 
-**[Vue UI Lab](https://github.com/vassellenha/PRAKTIKUM_UI-LANJUT_VASSELL-ENHA-ATTHAYYA_102042300140)** — Vue.js components, state management, routing, and REST API integration.
+<h3>AMANIN — AI Anti-Scam Assistant</h3>
+<p>AI-assisted anti-scam decision assistant concept.</p>
+<p><code>AI</code> <code>Decision Support</code> <code>Product Concept</code></p>
+<p><a href="https://github.com/vassellenha/AMANIN-Project">Explore the repository</a></p>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/vassellenha/Pharvia-Project"><img src="./assets/project-pharvia.svg" width="100%" alt="PHARVIA — pharmaceutical return and traceability business concept" /></a>
 
-**[AMANIN](https://github.com/vassellenha/AMANIN-Project)** — AI-assisted anti-scam decision assistant concept.
+<h3>PHARVIA — Pharma Traceability</h3>
+<p>Pharmaceutical return and traceability business concept.</p>
+<p><code>Healthcare</code> <code>Traceability</code> <code>Business Concept</code></p>
+<p><a href="https://github.com/vassellenha/Pharvia-Project">Explore the repository</a></p>
+</td>
+</tr></table>
 
-**[PHARVIA](https://github.com/vassellenha/Pharvia-Project)** — Pharmaceutical return and traceability business concept.
+<table><tr>
+<td width="50%" valign="top">
+<a href="https://github.com/vassellenha/PRAKTIKUM_UI-LANJUT_VASSELL-ENHA-ATTHAYYA_102042300140"><img src="./assets/project-vuelab.svg" width="100%" alt="Vue UI Lab — Vue.js components, routing and REST API integration" /></a>
 
-</details>
+<h3>Vue UI Lab</h3>
+<p>Vue.js components, state management, routing, and REST API integration.</p>
+<p><code>Vue.js</code> <code>Routing</code> <code>REST API</code></p>
+<p><a href="https://github.com/vassellenha/PRAKTIKUM_UI-LANJUT_VASSELL-ENHA-ATTHAYYA_102042300140">Explore the repository</a></p>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/vassellenha?tab=repositories"><img src="./assets/project-more.svg" width="100%" alt="More work — every repository on GitHub" /></a>
+
+<h3>More Work</h3>
+<p>Every other repository lives on GitHub.</p>
+<p><code>Laravel</code> <code>Vue</code> <code>Lua</code></p>
+<p><a href="https://github.com/vassellenha?tab=repositories">Browse all repositories</a></p>
+</td>
+</tr></table>
+
+<div align="center">
+
+<img src="./assets/journey-path.svg" width="100%" alt="The path so far: foundations, backend, interfaces, projects, competitions, internship as a full-stack developer, then Docker and cloud next." />
+
+</div>
+
+<div align="right"><a href="#top"><img src="https://img.shields.io/badge/%E2%86%91_BACK_TO_TOP-111520?style=flat-square&labelColor=F84586&color=111520" alt="Back to top" /></a></div>
+
+<img src="./assets/divider-petals.svg" width="100%" alt="" />
 
 <a id="activity"></a>
 <img src="./assets/section-04.svg" width="100%" alt="04 / DEVELOPMENT PULSE" />
@@ -114,11 +236,36 @@
 
 <a href="https://github.com/vassellenha?tab=overview"><img src="https://streak-stats.demolab.com?user=vassellenha&theme=dark&hide_border=true&background=0B0E14&ring=F84586&fire=FF73AA&currStreakLabel=F7ACCE&currStreakNum=FFFFFF&sideNums=FFFFFF&sideLabels=E6E7EF&dates=B4B9C8" width="63%" alt="Dynamic contribution streak from GitHub Streak Stats" /></a>
 
+<br /><br />
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vassellenha/vassellenha/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vassellenha/vassellenha/output/github-snake.svg" />
+  <img alt="A snake eating my GitHub contribution graph" src="https://raw.githubusercontent.com/vassellenha/vassellenha/output/github-snake-dark.svg" width="100%" />
+</picture>
+
+<br />
+
+<img src="https://github-readme-stats.vercel.app/api?username=vassellenha&show_icons=true&hide_border=true&bg_color=0B0E14&title_color=F84586&icon_color=FF73AA&text_color=E6E7EF&ring_color=F84586&border_radius=12" width="49%" alt="GitHub stats" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vassellenha&layout=compact&hide_border=true&bg_color=0B0E14&title_color=F84586&text_color=E6E7EF&border_radius=12&langs_count=8" width="49%" alt="Most used languages" />
+
+<br />
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=vassellenha&bg_color=0B0E14&color=F7ACCE&line=F84586&point=FFFFFF&area=true&area_color=F84586&hide_border=true&radius=12&custom_title=CONTRIBUTION%20GRAPH" width="100%" alt="Contribution activity graph" />
+
+<br />
+
+<img src="https://github-profile-trophy.vercel.app/?username=vassellenha&theme=radical&no-bg=true&no-frame=true&column=7&margin-w=10&margin-h=10" width="100%" alt="GitHub trophies" />
+
 <br />
 
 <a href="https://github.com/vassellenha?tab=overview"><img src="https://img.shields.io/badge/VIEW_GITHUB_ACTIVITY-111520?style=for-the-badge&logo=github&logoColor=F84586" alt="View GitHub activity" /></a>
 
 </div>
+
+<div align="right"><a href="#top"><img src="https://img.shields.io/badge/%E2%86%91_BACK_TO_TOP-111520?style=flat-square&labelColor=F84586&color=111520" alt="Back to top" /></a></div>
+
+<img src="./assets/divider-petals.svg" width="100%" alt="" />
 
 <a id="connect"></a>
 <img src="./assets/section-05.svg" width="100%" alt="05 / CONNECT" />
@@ -127,12 +274,867 @@ I work at the intersection of **software engineering, UI/UX, and product thinkin
 
 <div align="center">
 
-<a href="https://github.com/vassellenha?tab=repositories"><img src="https://img.shields.io/badge/REPOSITORIES-111520?style=for-the-badge&logo=github&logoColor=white" alt="GitHub repositories" /></a>
-<a href="https://websiteportofoliokelompok5.vercel.app/"><img src="https://img.shields.io/badge/PORTFOLIO-F84586?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
-<a href="https://www.linkedin.com/in/vassell-enha-atthayya-182661323"><img src="https://img.shields.io/badge/LINKEDIN-111520?style=for-the-badge&logo=linkedin&logoColor=F84586" alt="LinkedIn" /></a>
-<a href="https://instagram.com/vassellenha"><img src="https://img.shields.io/badge/INSTAGRAM-111520?style=for-the-badge&logo=instagram&logoColor=F84586" alt="Instagram" /></a>
+<a href="https://github.com/vassellenha?tab=repositories"><img src="./assets/btn-github.svg" width="380" alt="GitHub: @vassellenha" /></a>
+<a href="https://www.linkedin.com/in/vassell-enha-atthayya-182661323"><img src="./assets/btn-linkedin.svg" width="380" alt="LinkedIn: Vassell Enha Atthayya" /></a>
+<br />
+<a href="https://instagram.com/vassellenha"><img src="./assets/btn-instagram.svg" width="380" alt="Instagram: @vassellenha" /></a>
+<a href="https://websiteportofoliokelompok5.vercel.app/"><img src="./assets/btn-portfolio.svg" width="380" alt="Portfolio website" /></a>
 
 <br /><br />
+
+<details>
+<summary><b>./torii.stl — a real 3D torii. Drag to rotate, scroll to zoom.</b></summary>
+
+```stl
+solid torii
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex -4.30 -0.55 0.00
+vertex -3.20 0.55 0.00
+vertex -3.20 -0.55 0.00
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex -4.30 -0.55 0.00
+vertex -4.30 0.55 0.00
+vertex -3.20 0.55 0.00
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex -4.30 -0.55 10.00
+vertex -3.20 -0.55 10.00
+vertex -3.20 0.55 10.00
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex -4.30 -0.55 10.00
+vertex -3.20 0.55 10.00
+vertex -4.30 0.55 10.00
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex -4.30 -0.55 0.00
+vertex -3.20 -0.55 0.00
+vertex -3.20 -0.55 10.00
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex -4.30 -0.55 0.00
+vertex -3.20 -0.55 10.00
+vertex -4.30 -0.55 10.00
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex -3.20 -0.55 0.00
+vertex -3.20 0.55 0.00
+vertex -3.20 0.55 10.00
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex -3.20 -0.55 0.00
+vertex -3.20 0.55 10.00
+vertex -3.20 -0.55 10.00
+endloop
+endfacet
+facet normal 0.000 1.000 0.000
+outer loop
+vertex -3.20 0.55 0.00
+vertex -4.30 0.55 0.00
+vertex -4.30 0.55 10.00
+endloop
+endfacet
+facet normal 0.000 1.000 -0.000
+outer loop
+vertex -3.20 0.55 0.00
+vertex -4.30 0.55 10.00
+vertex -3.20 0.55 10.00
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex -4.30 0.55 0.00
+vertex -4.30 -0.55 0.00
+vertex -4.30 -0.55 10.00
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex -4.30 0.55 0.00
+vertex -4.30 -0.55 10.00
+vertex -4.30 0.55 10.00
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex -4.60 -0.90 -0.50
+vertex -2.90 0.90 -0.50
+vertex -2.90 -0.90 -0.50
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex -4.60 -0.90 -0.50
+vertex -4.60 0.90 -0.50
+vertex -2.90 0.90 -0.50
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex -4.60 -0.90 0.00
+vertex -2.90 -0.90 0.00
+vertex -2.90 0.90 0.00
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex -4.60 -0.90 0.00
+vertex -2.90 0.90 0.00
+vertex -4.60 0.90 0.00
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex -4.60 -0.90 -0.50
+vertex -2.90 -0.90 -0.50
+vertex -2.90 -0.90 0.00
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex -4.60 -0.90 -0.50
+vertex -2.90 -0.90 0.00
+vertex -4.60 -0.90 0.00
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex -2.90 -0.90 -0.50
+vertex -2.90 0.90 -0.50
+vertex -2.90 0.90 0.00
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex -2.90 -0.90 -0.50
+vertex -2.90 0.90 0.00
+vertex -2.90 -0.90 0.00
+endloop
+endfacet
+facet normal 0.000 1.000 0.000
+outer loop
+vertex -2.90 0.90 -0.50
+vertex -4.60 0.90 -0.50
+vertex -4.60 0.90 0.00
+endloop
+endfacet
+facet normal 0.000 1.000 -0.000
+outer loop
+vertex -2.90 0.90 -0.50
+vertex -4.60 0.90 0.00
+vertex -2.90 0.90 0.00
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex -4.60 0.90 -0.50
+vertex -4.60 -0.90 -0.50
+vertex -4.60 -0.90 0.00
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex -4.60 0.90 -0.50
+vertex -4.60 -0.90 0.00
+vertex -4.60 0.90 0.00
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex 3.20 -0.55 0.00
+vertex 4.30 0.55 0.00
+vertex 4.30 -0.55 0.00
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex 3.20 -0.55 0.00
+vertex 3.20 0.55 0.00
+vertex 4.30 0.55 0.00
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex 3.20 -0.55 10.00
+vertex 4.30 -0.55 10.00
+vertex 4.30 0.55 10.00
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex 3.20 -0.55 10.00
+vertex 4.30 0.55 10.00
+vertex 3.20 0.55 10.00
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex 3.20 -0.55 0.00
+vertex 4.30 -0.55 0.00
+vertex 4.30 -0.55 10.00
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex 3.20 -0.55 0.00
+vertex 4.30 -0.55 10.00
+vertex 3.20 -0.55 10.00
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex 4.30 -0.55 0.00
+vertex 4.30 0.55 0.00
+vertex 4.30 0.55 10.00
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex 4.30 -0.55 0.00
+vertex 4.30 0.55 10.00
+vertex 4.30 -0.55 10.00
+endloop
+endfacet
+facet normal 0.000 1.000 0.000
+outer loop
+vertex 4.30 0.55 0.00
+vertex 3.20 0.55 0.00
+vertex 3.20 0.55 10.00
+endloop
+endfacet
+facet normal 0.000 1.000 -0.000
+outer loop
+vertex 4.30 0.55 0.00
+vertex 3.20 0.55 10.00
+vertex 4.30 0.55 10.00
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex 3.20 0.55 0.00
+vertex 3.20 -0.55 0.00
+vertex 3.20 -0.55 10.00
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex 3.20 0.55 0.00
+vertex 3.20 -0.55 10.00
+vertex 3.20 0.55 10.00
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex 2.90 -0.90 -0.50
+vertex 4.60 0.90 -0.50
+vertex 4.60 -0.90 -0.50
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex 2.90 -0.90 -0.50
+vertex 2.90 0.90 -0.50
+vertex 4.60 0.90 -0.50
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex 2.90 -0.90 0.00
+vertex 4.60 -0.90 0.00
+vertex 4.60 0.90 0.00
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex 2.90 -0.90 0.00
+vertex 4.60 0.90 0.00
+vertex 2.90 0.90 0.00
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex 2.90 -0.90 -0.50
+vertex 4.60 -0.90 -0.50
+vertex 4.60 -0.90 0.00
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex 2.90 -0.90 -0.50
+vertex 4.60 -0.90 0.00
+vertex 2.90 -0.90 0.00
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex 4.60 -0.90 -0.50
+vertex 4.60 0.90 -0.50
+vertex 4.60 0.90 0.00
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex 4.60 -0.90 -0.50
+vertex 4.60 0.90 0.00
+vertex 4.60 -0.90 0.00
+endloop
+endfacet
+facet normal 0.000 1.000 0.000
+outer loop
+vertex 4.60 0.90 -0.50
+vertex 2.90 0.90 -0.50
+vertex 2.90 0.90 0.00
+endloop
+endfacet
+facet normal 0.000 1.000 -0.000
+outer loop
+vertex 4.60 0.90 -0.50
+vertex 2.90 0.90 0.00
+vertex 4.60 0.90 0.00
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex 2.90 0.90 -0.50
+vertex 2.90 -0.90 -0.50
+vertex 2.90 -0.90 0.00
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex 2.90 0.90 -0.50
+vertex 2.90 -0.90 0.00
+vertex 2.90 0.90 0.00
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex -5.00 -0.35 6.40
+vertex 5.00 0.35 6.40
+vertex 5.00 -0.35 6.40
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex -5.00 -0.35 6.40
+vertex -5.00 0.35 6.40
+vertex 5.00 0.35 6.40
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex -5.00 -0.35 7.20
+vertex 5.00 -0.35 7.20
+vertex 5.00 0.35 7.20
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex -5.00 -0.35 7.20
+vertex 5.00 0.35 7.20
+vertex -5.00 0.35 7.20
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex -5.00 -0.35 6.40
+vertex 5.00 -0.35 6.40
+vertex 5.00 -0.35 7.20
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex -5.00 -0.35 6.40
+vertex 5.00 -0.35 7.20
+vertex -5.00 -0.35 7.20
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex 5.00 -0.35 6.40
+vertex 5.00 0.35 6.40
+vertex 5.00 0.35 7.20
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex 5.00 -0.35 6.40
+vertex 5.00 0.35 7.20
+vertex 5.00 -0.35 7.20
+endloop
+endfacet
+facet normal 0.000 1.000 0.000
+outer loop
+vertex 5.00 0.35 6.40
+vertex -5.00 0.35 6.40
+vertex -5.00 0.35 7.20
+endloop
+endfacet
+facet normal 0.000 1.000 -0.000
+outer loop
+vertex 5.00 0.35 6.40
+vertex -5.00 0.35 7.20
+vertex 5.00 0.35 7.20
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex -5.00 0.35 6.40
+vertex -5.00 -0.35 6.40
+vertex -5.00 -0.35 7.20
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex -5.00 0.35 6.40
+vertex -5.00 -0.35 7.20
+vertex -5.00 0.35 7.20
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex -0.45 -0.30 7.20
+vertex 0.45 0.30 7.20
+vertex 0.45 -0.30 7.20
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex -0.45 -0.30 7.20
+vertex -0.45 0.30 7.20
+vertex 0.45 0.30 7.20
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex -0.45 -0.30 9.40
+vertex 0.45 -0.30 9.40
+vertex 0.45 0.30 9.40
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex -0.45 -0.30 9.40
+vertex 0.45 0.30 9.40
+vertex -0.45 0.30 9.40
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex -0.45 -0.30 7.20
+vertex 0.45 -0.30 7.20
+vertex 0.45 -0.30 9.40
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex -0.45 -0.30 7.20
+vertex 0.45 -0.30 9.40
+vertex -0.45 -0.30 9.40
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex 0.45 -0.30 7.20
+vertex 0.45 0.30 7.20
+vertex 0.45 0.30 9.40
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex 0.45 -0.30 7.20
+vertex 0.45 0.30 9.40
+vertex 0.45 -0.30 9.40
+endloop
+endfacet
+facet normal 0.000 1.000 0.000
+outer loop
+vertex 0.45 0.30 7.20
+vertex -0.45 0.30 7.20
+vertex -0.45 0.30 9.40
+endloop
+endfacet
+facet normal 0.000 1.000 -0.000
+outer loop
+vertex 0.45 0.30 7.20
+vertex -0.45 0.30 9.40
+vertex 0.45 0.30 9.40
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex -0.45 0.30 7.20
+vertex -0.45 -0.30 7.20
+vertex -0.45 -0.30 9.40
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex -0.45 0.30 7.20
+vertex -0.45 -0.30 9.40
+vertex -0.45 0.30 9.40
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex -5.90 -0.60 9.40
+vertex 5.90 0.60 9.40
+vertex 5.90 -0.60 9.40
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex -5.90 -0.60 9.40
+vertex -5.90 0.60 9.40
+vertex 5.90 0.60 9.40
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex -5.90 -0.60 10.20
+vertex 5.90 -0.60 10.20
+vertex 5.90 0.60 10.20
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex -5.90 -0.60 10.20
+vertex 5.90 0.60 10.20
+vertex -5.90 0.60 10.20
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex -5.90 -0.60 9.40
+vertex 5.90 -0.60 9.40
+vertex 5.90 -0.60 10.20
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex -5.90 -0.60 9.40
+vertex 5.90 -0.60 10.20
+vertex -5.90 -0.60 10.20
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex 5.90 -0.60 9.40
+vertex 5.90 0.60 9.40
+vertex 5.90 0.60 10.20
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex 5.90 -0.60 9.40
+vertex 5.90 0.60 10.20
+vertex 5.90 -0.60 10.20
+endloop
+endfacet
+facet normal 0.000 1.000 0.000
+outer loop
+vertex 5.90 0.60 9.40
+vertex -5.90 0.60 9.40
+vertex -5.90 0.60 10.20
+endloop
+endfacet
+facet normal 0.000 1.000 -0.000
+outer loop
+vertex 5.90 0.60 9.40
+vertex -5.90 0.60 10.20
+vertex 5.90 0.60 10.20
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex -5.90 0.60 9.40
+vertex -5.90 -0.60 9.40
+vertex -5.90 -0.60 10.20
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex -5.90 0.60 9.40
+vertex -5.90 -0.60 10.20
+vertex -5.90 0.60 10.20
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex -4.20 -0.85 10.20
+vertex 4.20 0.85 10.20
+vertex 4.20 -0.85 10.20
+endloop
+endfacet
+facet normal -0.000 -0.000 -1.000
+outer loop
+vertex -4.20 -0.85 10.20
+vertex -4.20 0.85 10.20
+vertex 4.20 0.85 10.20
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex -4.20 -0.85 11.00
+vertex 4.20 -0.85 11.00
+vertex 4.20 0.85 11.00
+endloop
+endfacet
+facet normal 0.000 0.000 1.000
+outer loop
+vertex -4.20 -0.85 11.00
+vertex 4.20 0.85 11.00
+vertex -4.20 0.85 11.00
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex -4.20 -0.85 10.20
+vertex 4.20 -0.85 10.20
+vertex 4.20 -0.85 11.00
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex -4.20 -0.85 10.20
+vertex 4.20 -0.85 11.00
+vertex -4.20 -0.85 11.00
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex 4.20 -0.85 10.20
+vertex 4.20 0.85 10.20
+vertex 4.20 0.85 11.00
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex 4.20 -0.85 10.20
+vertex 4.20 0.85 11.00
+vertex 4.20 -0.85 11.00
+endloop
+endfacet
+facet normal 0.000 1.000 0.000
+outer loop
+vertex 4.20 0.85 10.20
+vertex -4.20 0.85 10.20
+vertex -4.20 0.85 11.00
+endloop
+endfacet
+facet normal 0.000 1.000 -0.000
+outer loop
+vertex 4.20 0.85 10.20
+vertex -4.20 0.85 11.00
+vertex 4.20 0.85 11.00
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex -4.20 0.85 10.20
+vertex -4.20 -0.85 10.20
+vertex -4.20 -0.85 11.00
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex -4.20 0.85 10.20
+vertex -4.20 -0.85 11.00
+vertex -4.20 0.85 11.00
+endloop
+endfacet
+facet normal -0.251 0.000 -0.968
+outer loop
+vertex -4.20 -0.85 10.20
+vertex -6.90 -0.85 10.90
+vertex -6.90 0.85 10.90
+endloop
+endfacet
+facet normal -0.251 0.000 -0.968
+outer loop
+vertex -4.20 -0.85 10.20
+vertex -6.90 0.85 10.90
+vertex -4.20 0.85 10.20
+endloop
+endfacet
+facet normal 0.251 -0.000 0.968
+outer loop
+vertex -4.20 -0.85 11.00
+vertex -6.90 0.85 11.70
+vertex -6.90 -0.85 11.70
+endloop
+endfacet
+facet normal 0.251 -0.000 0.968
+outer loop
+vertex -4.20 -0.85 11.00
+vertex -4.20 0.85 11.00
+vertex -6.90 0.85 11.70
+endloop
+endfacet
+facet normal -0.000 -1.000 -0.000
+outer loop
+vertex -4.20 -0.85 10.20
+vertex -6.90 -0.85 11.70
+vertex -6.90 -0.85 10.90
+endloop
+endfacet
+facet normal -0.000 -1.000 0.000
+outer loop
+vertex -4.20 -0.85 10.20
+vertex -4.20 -0.85 11.00
+vertex -6.90 -0.85 11.70
+endloop
+endfacet
+facet normal -1.000 -0.000 -0.000
+outer loop
+vertex -6.90 -0.85 10.90
+vertex -6.90 0.85 11.70
+vertex -6.90 0.85 10.90
+endloop
+endfacet
+facet normal -1.000 -0.000 -0.000
+outer loop
+vertex -6.90 -0.85 10.90
+vertex -6.90 -0.85 11.70
+vertex -6.90 0.85 11.70
+endloop
+endfacet
+facet normal -0.000 1.000 -0.000
+outer loop
+vertex -6.90 0.85 10.90
+vertex -4.20 0.85 11.00
+vertex -4.20 0.85 10.20
+endloop
+endfacet
+facet normal -0.000 1.000 -0.000
+outer loop
+vertex -6.90 0.85 10.90
+vertex -6.90 0.85 11.70
+vertex -4.20 0.85 11.00
+endloop
+endfacet
+facet normal 1.000 -0.000 -0.000
+outer loop
+vertex -4.20 0.85 10.20
+vertex -4.20 -0.85 11.00
+vertex -4.20 -0.85 10.20
+endloop
+endfacet
+facet normal 1.000 -0.000 -0.000
+outer loop
+vertex -4.20 0.85 10.20
+vertex -4.20 0.85 11.00
+vertex -4.20 -0.85 11.00
+endloop
+endfacet
+facet normal 0.251 -0.000 -0.968
+outer loop
+vertex 4.20 -0.85 10.20
+vertex 6.90 0.85 10.90
+vertex 6.90 -0.85 10.90
+endloop
+endfacet
+facet normal 0.251 -0.000 -0.968
+outer loop
+vertex 4.20 -0.85 10.20
+vertex 4.20 0.85 10.20
+vertex 6.90 0.85 10.90
+endloop
+endfacet
+facet normal -0.251 0.000 0.968
+outer loop
+vertex 4.20 -0.85 11.00
+vertex 6.90 -0.85 11.70
+vertex 6.90 0.85 11.70
+endloop
+endfacet
+facet normal -0.251 0.000 0.968
+outer loop
+vertex 4.20 -0.85 11.00
+vertex 6.90 0.85 11.70
+vertex 4.20 0.85 11.00
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex 4.20 -0.85 10.20
+vertex 6.90 -0.85 10.90
+vertex 6.90 -0.85 11.70
+endloop
+endfacet
+facet normal 0.000 -1.000 0.000
+outer loop
+vertex 4.20 -0.85 10.20
+vertex 6.90 -0.85 11.70
+vertex 4.20 -0.85 11.00
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex 6.90 -0.85 10.90
+vertex 6.90 0.85 10.90
+vertex 6.90 0.85 11.70
+endloop
+endfacet
+facet normal 1.000 0.000 0.000
+outer loop
+vertex 6.90 -0.85 10.90
+vertex 6.90 0.85 11.70
+vertex 6.90 -0.85 11.70
+endloop
+endfacet
+facet normal 0.000 1.000 0.000
+outer loop
+vertex 6.90 0.85 10.90
+vertex 4.20 0.85 10.20
+vertex 4.20 0.85 11.00
+endloop
+endfacet
+facet normal 0.000 1.000 -0.000
+outer loop
+vertex 6.90 0.85 10.90
+vertex 4.20 0.85 11.00
+vertex 6.90 0.85 11.70
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex 4.20 0.85 10.20
+vertex 4.20 -0.85 10.20
+vertex 4.20 -0.85 11.00
+endloop
+endfacet
+facet normal -1.000 0.000 0.000
+outer loop
+vertex 4.20 0.85 10.20
+vertex 4.20 -0.85 11.00
+vertex 4.20 0.85 11.00
+endloop
+endfacet
+endsolid torii
+```
+
+</details>
+
+<br />
+
+<img src="./assets/divider-petals.svg" width="100%" alt="" />
 
 <img src="./assets/footer.svg" width="100%" alt="Build. Iterate. Ship." />
 
