@@ -2,9 +2,9 @@ CCELL SAKURA — COMPLETE GITHUB PROFILE PACKAGE
 
 1. Extract this ZIP on your computer.
 2. Open https://github.com/vassellenha/vassellenha
-3. Upload README.md, the entire assets/ directory AND .github/workflows/snake.yml (keep paths).
+3. Upload README.md and the entire assets/ directory (keep filenames and paths).
 4. Commit the changes.
-5. Open the Actions tab, run "Generate contribution snake" once, then refresh https://github.com/vassellenha
+5. Open https://github.com/vassellenha and refresh.
 
 IMPORTANT: Do not upload the ZIP file itself. GitHub will not extract it.
-See INSTALL.md for the full file list and notes.
+See INSTALL.md for the file list and notes.
