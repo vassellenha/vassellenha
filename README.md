@@ -31,16 +31,17 @@
 
 <p>I like taking an idea all the way to a working product, and I want to understand every layer of it, from the database to the deploy.</p>
 
-<ul>
-<li><b>Building:</b> BRREAD!, an entrepreneurship web app</li>
-<li><b>Learning:</b> Docker, cloud deployment, Vue.js, and Lua</li>
-<li><b>Open to:</b> Full-stack, UI/UX, and game-development collaborations</li>
-<li><b>Beyond code:</b> national achievements in business model canvas and business proposal competitions (2026)</li>
-</ul>
+<p><img src="./assets/icon-building.svg" width="20" height="20" align="absmiddle" alt="" />&nbsp; <b>Building</b><br />BRREAD!, an entrepreneurship web app<br /><img src="https://skillicons.dev/icons?i=laravel,php,mysql&theme=dark" height="30" alt="Laravel, PHP, MySQL" /></p>
 
-</td><td width="27%" align="center" valign="top">
+<p><img src="./assets/icon-learning.svg" width="20" height="20" align="absmiddle" alt="" />&nbsp; <b>Learning</b><br />Docker, cloud deployment, Vue.js and Lua<br /><img src="https://skillicons.dev/icons?i=docker,vue,lua&theme=dark" height="30" alt="Docker, Vue, Lua" /></p>
 
-<img src="https://www.sonymusic.co.jp/img/common/artist_image/77709000/77709502/profile/ASA13_17398.jpg" width="190" alt="Editorial portrait" />
+<p><img src="./assets/icon-open.svg" width="20" height="20" align="absmiddle" alt="" />&nbsp; <b>Open to</b><br />Full-stack, UI/UX and game-development collaborations</p>
+
+<p><img src="./assets/icon-beyond.svg" width="20" height="20" align="absmiddle" alt="" />&nbsp; <b>Beyond code</b><br />National achievements in business model canvas and business proposal competitions (2026)</p>
+
+</td><td width="27%" align="center" valign="middle">
+
+<img src="https://www.sonymusic.co.jp/img/common/artist_image/77709000/77709502/profile/ASA13_17398.jpg" width="230" alt="Editorial portrait" />
 
 </td></tr></table>
 
