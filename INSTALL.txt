@@ -1,0 +1,8 @@
+GitHub Profile README installation
+1. Open https://github.com/vassellenha/vassellenha
+2. Upload README.md AND the entire assets/ folder at the repository root.
+3. Commit changes and open your GitHub profile.
+
+IMPORTANT: GitHub READMEs do not support custom animated full-page CSS backgrounds. The header GIF is a full-width animated banner, not a background for the entire page.
+
+External images (ASA portrait, stats, skill icons) depend on their hosts and may not load if the host blocks requests.
