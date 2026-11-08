@@ -27,7 +27,7 @@
 
 <table><tr><td width="73%" valign="middle">
 
-<img src="./assets/about-card.svg" width="100%" alt="About: I build web apps and design their interfaces. I'm Vassell Enha Atthayya, or ccell. I study Information Systems at Telkom University and work on full-stack web apps, interface design and cloud deployment. I like taking an idea all the way to a working product, from the database to the deploy. Building: BRREAD!, an entrepreneurship web app (Laravel, PHP, MySQL). Learning: Docker, cloud deployment, Vue.js and Lua. Open to: full-stack, UI/UX and game-development collaborations. Beyond code: national achievements in business model canvas and business proposal competitions (2026)." />
+<img src="./assets/about-card.svg" width="100%" alt="About: Hi, I'm Vassell Enha Atthayya, or ccell. I study Information Systems at Telkom University and work on full-stack web apps, interface design and cloud deployment. I like taking an idea all the way to a working product, and I want to understand every layer of it, from the database to the deploy. Open to full-stack, UI/UX and game-development collaborations. National achievements in business model canvas and business proposal competitions (2026)." />
 
 </td><td width="27%" align="center" valign="middle">
 
@@ -44,7 +44,7 @@
 
 <div align="center">
 
-<img src="./assets/stack-orbit.svg" width="100%" alt="Animated stack orbit. Inner orbit: HTML, CSS, JS, TS, React, Vue, Tailwind, Figma. Middle orbit: PHP, Laravel, Node.js, MySQL, Python, REST API, RBAC. Outer orbit: Git, GitHub, Postman, VS Code, plus Docker, Cloud, Lua and Roblox that I am exploring." />
+<img src="./assets/stack-orbit.svg" width="100%" alt="Animated stack orbit with tool logos. Inner orbit: HTML, CSS, JavaScript, TypeScript, React, Vue, Tailwind CSS, Figma. Middle orbit: PHP, Laravel, Node.js, MySQL, Python, REST API, RBAC. Outer orbit: Git, GitHub, Postman, VS Code, plus Docker, Cloud, Lua and Roblox Studio that I am exploring." />
 
 </div>
 
