@@ -1,11 +1,10 @@
-<div align="center"><!-- Original animated header. Commit the assets/ folder together with this README. -->
-<img src="./assets/ccell-asa-hero.gif" alt="CCELL — Vassell Enha Atthayya | Developer meets ASA-inspired editorial visuals" width="100%" />
+<div align="center"><!-- Animated neon background header. Upload the assets/ folder with this README. -->
+<img src="./assets/ccell-animated-hero.gif" alt="CCELL — Vassell Enha Atthayya | animated neon developer header" width="100%" />
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Space+Mono&weight=700&size=20&duration=2450&pause=700&color=FF4C86&center=true&vCenter=true&width=840&lines=Hi%2C+I%27m+Vassell+Enha+Atthayya+%E2%80%94+ccell.;Full-Stack+Web+Developer+%2B+UI%2FUX+Designer;Turning+systems+into+experiences.;Developer+brain.+BABYMONSTER+playlist." alt="Animated developer introduction" /></a>
 
 <a href="https://github.com/vassellenha"><img src="https://img.shields.io/badge/GITHUB-0B0A11?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
 <a href="https://websiteportofoliokelompok5.vercel.app/"><img src="https://img.shields.io/badge/PORTFOLIO-FF3B76?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/></a>
 <a href="https://instagram.com/vassellenha"><img src="https://img.shields.io/badge/INSTAGRAM-1E1521?style=for-the-badge&logo=instagram&logoColor=FF85B0" alt="Instagram"/></a>
-<a href="https://yg-babymonster-official.jp/profile/"><img src="https://img.shields.io/badge/ASA_BIAS-BABYMONSTER-DB2462?style=for-the-badge&logo=heart&logoColor=white" alt="BABYMONSTER ASA fan"/></a>
 
 
 
@@ -16,12 +15,12 @@
 <h2>Developer in the making. Creator by instinct.</h2><p>I'm <b>Vassell Enha Atthayya</b>, also known as <b>ccell</b> — an <b>Information Systems student at Telkom University</b> with a focus on <b>full-stack web development, UI/UX design, and cloud technologies</b>.</p><p>I enjoy solving real problems, refining interfaces, and building products that feel as good as they function.</p><p>🎯 <b>Building:</b> Brread! — entrepreneurship web application<br/>
 🧪 <b>Learning:</b> Vue.js, Lua, Docker & cloud deployment<br/>
 🤝 <b>Open to:</b> Full-stack apps, design & Roblox collaboration<br/>
-🏆 <b>Beyond code:</b> National BMC & proposal competition awards (2026)</p><code>const ccell = { code: true, design: true, asaBias: true };</code>
+🏆 <b>Beyond code:</b> National BMC & proposal competition awards (2026)</p><code>const ccell = { code: true, design: true, building: true };</code>
 </td>
 <td width="35%" align="center" valign="top">
 <a href="https://ssl.sme.co.jp/artist/BABYMONSTER/profile/"><img src="https://www.sonymusic.co.jp/img/common/artist_image/77709000/77709502/profile/ASA13_17398.jpg" width="265" alt="ASA of BABYMONSTER — official Sony Music profile photo"/></a>
 
-<img src="https://img.shields.io/badge/BIAS-ENAMI%20ASA-FF3B76?style=flat-square&labelColor=121018" alt="Enami Asa bias"/><sub>ASA / BABYMONSTER · Official promotional image: <a href="https://ssl.sme.co.jp/artist/BABYMONSTER/profile/">Sony Music</a></sub>
+<img src="https://img.shields.io/badge/ENAMI_ASA-BABYMONSTER-FF3B76?style=flat-square&labelColor=121018" alt="ASA BABYMONSTER"/><sub>ASA / BABYMONSTER · Official promotional image: <a href="https://ssl.sme.co.jp/artist/BABYMONSTER/profile/">Sony Music</a></sub>
 </td>
 </tr>
 </table><div align="center">02 / TECH ARSENAL
@@ -51,10 +50,12 @@ EXPLORING NEXT
 <tr>
 <td width="57%" valign="top">05 / OFF-SCREEN SIDE QUESTS
 <h3>🏆 Business & Product Challenges</h3><p>First- and second-place finishes in national Business Model Canvas and proposal competitions (2026).</p><p>I like the space where <b>business strategy</b>, <b>software engineering</b>, and <b>product experience</b> meet.</p></td>
-<td width="43%" valign="top">06 / FAN SIGNAL
-<h3>🎧 BABYMONSTER / ASA</h3><p><b>Enami Asa</b> is my bias. The visual influence here: bold contrast, sharp typography, performance-driven energy, and a touch of pink.</p><p><a href="https://yg-babymonster-official.jp/profile/">BABYMONSTER official profile ↗</a></p></td>
+<td width="43%" valign="top">06 / VISUAL INSPIRATION
+<h3>🎧 BABYMONSTER / ASA</h3><p>Inspired by <b>Enami Asa</b> of BABYMONSTER: bold contrast, sharp editorial typography, performance-driven energy, and a touch of pink.</p><p><a href="https://yg-babymonster-official.jp/profile/">BABYMONSTER official profile ↗</a></p></td>
 </tr>
 </table><div align="center"><a href="https://github.com/vassellenha?tab=repositories"><img src="https://img.shields.io/badge/EXPLORE_ALL_REPOSITORIES-17111E?style=for-the-badge&logo=github&logoColor=FF4C86" alt="Explore my GitHub repositories"/></a>
 <a href="https://websiteportofoliokelompok5.vercel.app/"><img src="https://img.shields.io/badge/VIEW_PORTFOLIO-FF3B76?style=for-the-badge&logo=vercel&logoColor=white" alt="View portfolio"/></a>
+
+
 
 <img src="./assets/footer.svg" width="100%" alt="Keep building, keep creating"/>
