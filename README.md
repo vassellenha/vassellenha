@@ -38,15 +38,6 @@
 <li><b>Beyond code:</b> national achievements in business model canvas and business proposal competitions (2026)</li>
 </ul>
 
-```js
-const ccell = {
-  studying: 'Information Systems @ Telkom University',
-  stack: ['Laravel', 'Vue', 'React', 'MySQL', 'Figma'],
-  building: 'BRREAD!',
-  learning: ['Docker', 'Lua'],
-};
-```
-
 </td><td width="27%" align="center" valign="top">
 
 <img src="https://www.sonymusic.co.jp/img/common/artist_image/77709000/77709502/profile/ASA13_17398.jpg" width="190" alt="Editorial portrait" />
