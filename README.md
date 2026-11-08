@@ -38,11 +38,14 @@
 <li><b>Beyond code:</b> national achievements in business model canvas and business proposal competitions (2026)</li>
 </ul>
 
-<pre><code>const ccell = {
-  role: 'Full-Stack Developer',
-  focus: ['web', 'design', 'cloud'],
-  principle: 'Build things that work.'
-};</code></pre>
+```js
+const ccell = {
+  studying: 'Information Systems @ Telkom University',
+  stack: ['Laravel', 'Vue', 'React', 'MySQL', 'Figma'],
+  building: 'BRREAD!',
+  learning: ['Docker', 'Lua'],
+};
+```
 
 </td><td width="27%" align="center" valign="top">
 
