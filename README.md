@@ -1,179 +1,134 @@
 <div align="center">
 
-<!-- Animated neon background header. Upload the assets/ folder with this README. -->
-<img src="./assets/ccell-animated-hero.gif" alt="CCELL — Vassell Enha Atthayya | animated neon developer header" width="100%" />
+<img src="./assets/ccell-sakura-terminal.gif" width="100%" alt="Vassell Enha Atthayya - CCELL, animated black-cherry cyberpunk GitHub header" />
 
-<br/>
+<br />
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Space+Mono&weight=700&size=20&duration=2450&pause=700&color=FF4C86&center=true&vCenter=true&width=840&lines=Hi%2C+I%27m+Vassell+Enha+Atthayya+%E2%80%94+ccell.;Full-Stack+Web+Developer+%2B+UI%2FUX+Designer;Turning+systems+into+experiences.;Developer+brain.+BABYMONSTER+playlist." alt="Animated developer introduction" /></a>
+<a href="#about"><img src="https://img.shields.io/badge/01-ABOUT-161A22?style=for-the-badge&labelColor=FF477F&color=161A22" alt="About" /></a>
+<a href="#stack"><img src="https://img.shields.io/badge/02-STACK-161A22?style=for-the-badge&labelColor=FF477F&color=161A22" alt="Stack" /></a>
+<a href="#work"><img src="https://img.shields.io/badge/03-WORK-161A22?style=for-the-badge&labelColor=FF477F&color=161A22" alt="Work" /></a>
+<a href="#activity"><img src="https://img.shields.io/badge/04-ACTIVITY-161A22?style=for-the-badge&labelColor=FF477F&color=161A22" alt="Activity" /></a>
+<a href="#connect"><img src="https://img.shields.io/badge/05-CONNECT-161A22?style=for-the-badge&labelColor=FF477F&color=161A22" alt="Connect" /></a>
 
-<br/>
+<br />
 
-<a href="https://github.com/vassellenha"><img src="https://img.shields.io/badge/GITHUB-0B0A11?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-<a href="https://websiteportofoliokelompok5.vercel.app/"><img src="https://img.shields.io/badge/PORTFOLIO-FF3B76?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/></a>
-<a href="https://instagram.com/vassellenha"><img src="https://img.shields.io/badge/INSTAGRAM-1E1521?style=for-the-badge&logo=instagram&logoColor=FF85B0" alt="Instagram"/></a>
-
-<br/><br/>
-
-<img src="https://komarev.com/ghpvc/?username=vassellenha&label=PROFILE+VIEWS&color=ff3b76&style=flat-square" alt="Profile views"/>
-<img src="https://img.shields.io/github/followers/vassellenha?label=FOLLOWERS&style=flat-square&color=9f86d9&labelColor=17111e" alt="GitHub followers"/>
+<a href="https://github.com/vassellenha"><img src="https://img.shields.io/badge/GitHub-10141B?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
+<a href="https://websiteportofoliokelompok5.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-FF477F?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio" /></a>
+<a href="https://instagram.com/vassellenha"><img src="https://img.shields.io/badge/Instagram-10141B?style=flat-square&logo=instagram&logoColor=FF477F" alt="Instagram" /></a>
+<img src="https://komarev.com/ghpvc/?username=vassellenha&label=Visitors&color=FF477F&style=flat-square" alt="Profile visitors" />
 
 </div>
 
----
+<a id="about"></a>
+## 01 / Identity
 
-<table>
-<tr>
-<td width="65%" valign="top">
+<table><tr><td width="73%" valign="top">
 
-### 01 / WHO AM I?
+<h3>Full-Stack Developer. UI/UX-minded.</h3>
 
-<h2>Developer in the making. Creator by instinct.</h2>
+<p>I'm <b>Vassell Enha Atthayya</b> (<code>ccell</code>), an Information Systems student at <b>Telkom University</b>. I build practical web experiences, from clean interfaces to functional backend systems.</p>
 
-<p>I'm <b>Vassell Enha Atthayya</b>, also known as <b>ccell</b> — an <b>Information Systems student at Telkom University</b> with a focus on <b>full-stack web development, UI/UX design, and cloud technologies</b>.</p>
+<p>Currently focused on <b>Laravel, React, Vue.js, and UI/UX design</b> — while exploring cloud deployment, Docker, and Lua for game development.</p>
 
-<p>I enjoy solving real problems, refining interfaces, and building products that feel as good as they function.</p>
+<pre>const ccell = {
+  focus: ["full-stack", "ui/ux", "cloud"],
+  currentlyBuilding: "Brread!",
+  status: "always shipping"
+};</pre>
 
-<p>🎯 <b>Building:</b> Brread! — entrepreneurship web application<br/>
-🧪 <b>Learning:</b> Vue.js, Lua, Docker & cloud deployment<br/>
-🤝 <b>Open to:</b> Full-stack apps, design & Roblox collaboration<br/>
-🏆 <b>Beyond code:</b> National BMC & proposal competition awards (2026)</p>
+</td><td width="27%" align="center" valign="top">
 
-<code>const ccell = { code: true, design: true, building: true };</code>
+<img src="https://www.sonymusic.co.jp/img/common/artist_image/77709000/77709502/profile/ASA13_17398.jpg" width="185" alt="Editorial portrait" />
 
-</td>
-<td width="35%" align="center" valign="top">
+</td></tr></table>
 
-<a href="https://ssl.sme.co.jp/artist/BABYMONSTER/profile/"><img src="https://www.sonymusic.co.jp/img/common/artist_image/77709000/77709502/profile/ASA13_17398.jpg" width="265" alt="ASA of BABYMONSTER — official Sony Music profile photo"/></a>
-
-<br/>
-
-<img src="https://img.shields.io/badge/ENAMI_ASA-BABYMONSTER-FF3B76?style=flat-square&labelColor=121018" alt="ASA BABYMONSTER"/>
-
-<sub>ASA / BABYMONSTER · Official promotional image: <a href="https://ssl.sme.co.jp/artist/BABYMONSTER/profile/">Sony Music</a></sub>
-
-</td>
-</tr>
-</table>
-
----
+<a id="stack"></a>
+## 02 / The toolkit
 
 <div align="center">
 
-### 02 / TECH ARSENAL
-
-<sub>Technologies I use or explore — not all at the same proficiency level.</sub>
-
-**FRONTEND & INTERFACE**
-
-<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,vue,nextjs,tailwind,bootstrap,figma&theme=dark&perline=10" alt="HTML CSS JavaScript TypeScript React Vue Next.js Tailwind Bootstrap Figma" />
-
-**BACKEND & DATA**
-
-<img src="https://skillicons.dev/icons?i=php,laravel,nodejs,python,mysql&theme=dark&perline=8" alt="PHP Laravel Node.js Python MySQL" />
-
-**WORKFLOW, CLOUD & TOOLS**
-
-<img src="https://skillicons.dev/icons?i=git,github,docker,aws,azure,gcp,nginx,postman&theme=dark&perline=8" alt="Git GitHub Docker AWS Azure GCP Nginx Postman" />
-
-**EXPLORING NEXT**
-
-<img src="https://skillicons.dev/icons?i=lua,flutter,dart,androidstudio,kubernetes,selenium&theme=dark&perline=8" alt="Lua Flutter Dart Android Studio Kubernetes Selenium" />
+<img src="https://skillicons.dev/icons?i=laravel,php,react,vue,js,ts,html,css,tailwind,mysql,figma,git,docker,postman&theme=dark&perline=7" alt="Laravel PHP React Vue JavaScript TypeScript HTML CSS Tailwind MySQL Figma Git Docker Postman" />
 
 </div>
 
----
+<details><summary><b>Expand / Full tech inventory</b></summary>
 
-### 03 / SELECTED BUILDS
+**Frontend & interface** — HTML, CSS, JavaScript, TypeScript, React, Vue.js, Tailwind CSS, Figma.
+
+**Backend & data** — PHP, Laravel, Node.js, MySQL, Python.
+
+**Tools & learning** — Git, Postman, Docker, cloud platforms, Lua, Roblox Studio.
+
+</details>
+
+<a id="work"></a>
+## 03 / Selected work
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-<h3>🍞 Brread! / Entrepreneurship Web App</h3>
+<h3><a href="https://github.com/vassellenha/KWU-BRREAD">BRREAD! / Business Web App</a></h3>
 
-<img src="https://img.shields.io/badge/PROJECT-FULL--STACK-FF3B76?style=flat-square&labelColor=17111E" alt="Full-stack project"/>
+<p>Building an entrepreneurship web application with storefront, staff access, and inventory workflows.</p>
 
-<p>A customer-facing storefront with staff workflows and inventory / MRP capabilities. Currently building its web application experience.</p>
+<code>Laravel</code> <code>PHP</code> <code>MySQL</code>
 
-<p><code>Laravel</code> <code>PHP</code> <code>MySQL</code> <code>UI/UX</code></p>
+<p><a href="https://github.com/vassellenha/KWU-BRREAD">Explore repository ↗</a></p>
 
-<a href="https://github.com/vassellenha?tab=repositories">Browse repositories ↗</a>
+</td><td width="50%" valign="top">
 
-</td>
-<td width="50%" valign="top">
+<h3><a href="https://github.com/vassellenha/CatchAndClash_Roblox_Project">Catch & Clash / Roblox</a></h3>
 
-<h3>🎫 Enterprise Helpdesk 2.0</h3>
+<p>Game-development project exploring Roblox experiences and Lua-based gameplay systems.</p>
 
-<img src="https://img.shields.io/badge/PROJECT-IT_SERVICE_MANAGEMENT-9B82DB?style=flat-square&labelColor=17111E" alt="IT service management project"/>
+<code>Roblox Studio</code> <code>Lua</code> <code>Game Development</code>
 
-<p>A role-based service desk featuring ticket workflows, service catalogs, SLA configuration and administration tools.</p>
+<p><a href="https://github.com/vassellenha/CatchAndClash_Roblox_Project">Explore repository ↗</a></p>
 
-<p><code>Laravel</code> <code>React</code> <code>MySQL</code> <code>RBAC</code></p>
-
-<a href="https://github.com/vassellenha?tab=repositories">Browse repositories ↗</a>
-
-</td>
-</tr>
+</td></tr>
 </table>
 
----
+<details><summary><b>More / Vue UI Lab & other projects</b></summary>
+
+**[Vue UI Lab — Advanced Interface Development](https://github.com/vassellenha/PRAKTIKUM_UI-LANJUT_VASSELL-ENHA-ATTHAYYA_102042300140)** — Frontend component architecture, navigation, state and API integration experiments.
+
+**[AMANIN](https://github.com/vassellenha/AMANIN-Project)** — AI-assisted anti-scam product concept.
+
+**[PHARVIA](https://github.com/vassellenha/Pharvia-Project)** — Pharmaceutical return and traceability business concept.
+
+</details>
+
+<a id="activity"></a>
+## 04 / Development pulse
 
 <div align="center">
 
-### 04 / COMMIT FREQUENCY
+<a href="https://github.com/vassellenha?tab=overview"><img src="./assets/development-pulse.svg" alt="Development workflow: design build deploy iterate - links to GitHub activity" width="100%" /></a>
 
-<img height="175" src="https://github-readme-stats.vercel.app/api?username=vassellenha&show_icons=true&hide_border=true&bg_color=0B0A11&title_color=FF4C86&icon_color=FF4C86&text_color=F2EAF2&ring_color=FF4C86" alt="GitHub stats" />
-<img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=vassellenha&layout=compact&hide_border=true&bg_color=0B0A11&title_color=FF4C86&text_color=F2EAF2&langs_count=8" alt="Top languages" />
+<br />
 
-<br/>
+<a href="https://github.com/vassellenha?tab=overview"><img src="https://streak-stats.demolab.com?user=vassellenha&hide_border=true&background=0C1018&ring=FF477F&fire=FF477F&currStreakLabel=FF477F&sideLabels=EAECEF&dates=95A1B7" alt="GitHub contribution streak (third-party widget)" /></a>
 
-<img src="https://streak-stats.demolab.com?user=vassellenha&hide_border=true&background=0B0A11&ring=FF4C86&fire=FF4C86&currStreakLabel=FF4C86&sideLabels=F2EAF2&dates=9B8EA6" alt="GitHub streak" />
+<br />
 
-<br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=vassellenha&bg_color=0b0a11&color=ff4c86&line=bd86ee&point=ffffff&area=true&hide_border=true" width="98%" alt="GitHub activity graph"/>
+<a href="https://github.com/vassellenha?tab=overview"><img src="https://img.shields.io/badge/VIEW_LIVE_GITHUB_ACTIVITY-0E121A?style=for-the-badge&logo=github&logoColor=FF477F" alt="View live GitHub activity" /></a>
 
 </div>
 
----
+<a id="connect"></a>
+## 05 / Connect
 
-<table>
-<tr>
-<td width="57%" valign="top">
-
-### 05 / OFF-SCREEN SIDE QUESTS
-
-<h3>🏆 Business & Product Challenges</h3>
-
-<p>First- and second-place finishes in national Business Model Canvas and proposal competitions (2026).</p>
-
-<p>I like the space where <b>business strategy</b>, <b>software engineering</b>, and <b>product experience</b> meet.</p>
-
-</td>
-<td width="43%" valign="top">
-
-### 06 / VISUAL INSPIRATION
-
-<h3>🎧 BABYMONSTER / ASA</h3>
-
-<p>Inspired by <b>Enami Asa</b> of BABYMONSTER: bold contrast, sharp editorial typography, performance-driven energy, and a touch of pink.</p>
-
-<p><a href="https://yg-babymonster-official.jp/profile/">BABYMONSTER official profile ↗</a></p>
-
-</td>
-</tr>
-</table>
+Interested in full-stack development, design systems, cloud platforms, or game-development collaborations? See my work and reach out through the links below.
 
 <div align="center">
 
-<a href="https://github.com/vassellenha?tab=repositories"><img src="https://img.shields.io/badge/EXPLORE_ALL_REPOSITORIES-17111E?style=for-the-badge&logo=github&logoColor=FF4C86" alt="Explore my GitHub repositories"/></a>
-<a href="https://websiteportofoliokelompok5.vercel.app/"><img src="https://img.shields.io/badge/VIEW_PORTFOLIO-FF3B76?style=for-the-badge&logo=vercel&logoColor=white" alt="View portfolio"/></a>
+<a href="https://github.com/vassellenha?tab=repositories"><img src="https://img.shields.io/badge/REPOSITORIES-121722?style=for-the-badge&logo=github&logoColor=white" alt="Repositories" /></a>
+<a href="https://websiteportofoliokelompok5.vercel.app/"><img src="https://img.shields.io/badge/PORTFOLIO-FF477F?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
+<a href="https://instagram.com/vassellenha"><img src="https://img.shields.io/badge/INSTAGRAM-121722?style=for-the-badge&logo=instagram&logoColor=FF477F" alt="Instagram" /></a>
 
-<br/><br/>
+<br /><br />
 
-<img src="./assets/footer.svg" width="100%" alt="Keep building, keep creating"/>
-
-<sub>Personal, fan-made profile aesthetic. Not affiliated with BABYMONSTER or YG Entertainment.</sub>
+<img src="./assets/footer.svg" width="100%" alt="Code. Design. Deploy. Repeat." />
 
 </div>

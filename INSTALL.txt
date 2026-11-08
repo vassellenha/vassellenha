@@ -1,8 +1,17 @@
-GitHub Profile README installation
-1. Open https://github.com/vassellenha/vassellenha
-2. Upload README.md AND the entire assets/ folder at the repository root.
-3. Commit changes and open your GitHub profile.
+BLACKCHERRY / CCELL GitHub Profile README
 
-IMPORTANT: GitHub READMEs do not support custom animated full-page CSS backgrounds. The header GIF is a full-width animated banner, not a background for the entire page.
+1. Extract this ZIP on your computer.
+2. Open https://github.com/vassellenha/vassellenha
+3. Choose Add file > Upload files.
+4. Upload README.md and the entire assets/ folder together, preserving names.
+5. Commit changes and visit https://github.com/vassellenha
 
-External images (ASA portrait, stats, skill icons) depend on their hosts and may not load if the host blocks requests.
+IMPORTANT
+- Upload the extracted files, not the ZIP itself.
+- The animated GIF is assets/ccell-sakura-terminal.gif.
+- GitHub does not support custom site-wide CSS/JavaScript backgrounds in README files.
+- Real interaction: section-jump links and expandable details; animation: GIF.
+- Static SVG development pulse is decorative, not a live contributions graph.
+- The GitHub streak widget is third-party and can occasionally fail; all other design assets are in this ZIP.
+- The portrait is an externally hosted promotional image; it may change or be removed by its hosting site.
+- No 'ASA BIAS', fan disclaimer, or visual-inspiration section.
