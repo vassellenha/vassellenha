@@ -25,21 +25,9 @@
 <a id="about"></a>
 <img src="./assets/section-01.svg" width="100%" alt="01 / ABOUT ME" />
 
-<table><tr><td width="73%" valign="top">
+<table><tr><td width="73%" valign="middle">
 
-<h3>I build web apps and design their interfaces.</h3>
-
-<p>I'm <b>Vassell Enha Atthayya</b>, or <b>ccell</b>. I study Information Systems at <b>Telkom University</b> and work on full-stack web apps, interface design and cloud deployment.</p>
-
-<p>I like taking an idea all the way to a working product, and I want to understand every layer of it, from the database to the deploy.</p>
-
-<p><img src="./assets/icon-building.svg" width="20" height="20" align="absmiddle" alt="" />&nbsp; <b>Building</b><br />BRREAD!, an entrepreneurship web app<br /><img src="https://skillicons.dev/icons?i=laravel,php,mysql&theme=dark" height="30" alt="Laravel, PHP, MySQL" /></p>
-
-<p><img src="./assets/icon-learning.svg" width="20" height="20" align="absmiddle" alt="" />&nbsp; <b>Learning</b><br />Docker, cloud deployment, Vue.js and Lua<br /><img src="https://skillicons.dev/icons?i=docker,vue,lua&theme=dark" height="30" alt="Docker, Vue, Lua" /></p>
-
-<p><img src="./assets/icon-open.svg" width="20" height="20" align="absmiddle" alt="" />&nbsp; <b>Open to</b><br />Full-stack, UI/UX and game-development collaborations</p>
-
-<p><img src="./assets/icon-beyond.svg" width="20" height="20" align="absmiddle" alt="" />&nbsp; <b>Beyond code</b><br />National achievements in business model canvas and business proposal competitions (2026)</p>
+<img src="./assets/about-card.svg" width="100%" alt="About: I build web apps and design their interfaces. I'm Vassell Enha Atthayya, or ccell. I study Information Systems at Telkom University and work on full-stack web apps, interface design and cloud deployment. I like taking an idea all the way to a working product, from the database to the deploy. Building: BRREAD!, an entrepreneurship web app (Laravel, PHP, MySQL). Learning: Docker, cloud deployment, Vue.js and Lua. Open to: full-stack, UI/UX and game-development collaborations. Beyond code: national achievements in business model canvas and business proposal competitions (2026)." />
 
 </td><td width="27%" align="center" valign="middle">
 
@@ -65,7 +53,7 @@
 
 <table><tr>
 <td width="50%" valign="top">
-<a href="https://github.com/vassellenha/KWU-BRREAD"><img src="./assets/project-brread.png" width="100%" alt="BRREAD! — Laravel-based entrepreneurship web application" /></a>
+<a href="https://github.com/vassellenha/KWU-BRREAD"><img src="./assets/project-brread.svg" width="100%" alt="BRREAD! — Laravel-based entrepreneurship web application" /></a>
 
 <h3>BRREAD! — Business Web App</h3>
 <p>Entrepreneurship platform with customer storefront, staff-role access and inventory management workflows.</p>
@@ -73,7 +61,7 @@
 <p><a href="https://github.com/vassellenha/KWU-BRREAD">Explore the repository</a></p>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/vassellenha/CatchAndClash_Roblox_Project"><img src="./assets/project-catchclash.png" width="100%" alt="Catch and Clash — Roblox game development" /></a>
+<a href="https://github.com/vassellenha/CatchAndClash_Roblox_Project"><img src="./assets/project-catchclash.svg" width="100%" alt="Catch and Clash — Roblox game development" /></a>
 
 <h3>Catch &amp; Clash — Roblox</h3>
 <p>Game-development project focused on Roblox experiences and Lua-based gameplay systems.</p>
@@ -92,12 +80,12 @@
 <p><a href="https://github.com/vassellenha/AMANIN-Project">Explore the repository</a></p>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/vassellenha/Pharvia-Project"><img src="./assets/project-pharvia.svg" width="100%" alt="PHARVIA — pharmaceutical return and traceability business concept" /></a>
+<a href="https://github.com/vassellenha/PHARVIA-Project"><img src="./assets/project-pharvia.svg" width="100%" alt="PHARVIA — pharmaceutical return and traceability business concept" /></a>
 
 <h3>PHARVIA — Pharma Traceability</h3>
 <p>Pharmaceutical return and traceability business concept.</p>
 <p><code>Healthcare</code> <code>Traceability</code> <code>Business Concept</code></p>
-<p><a href="https://github.com/vassellenha/Pharvia-Project">Explore the repository</a></p>
+<p><a href="https://github.com/vassellenha/PHARVIA-Project">Explore the repository</a></p>
 </td>
 </tr></table>
 
@@ -1002,6 +990,7 @@ vertex 4.20 0.85 11.00
 endloop
 endfacet
 endsolid torii
+
 ```
 
 </details>
