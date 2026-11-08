@@ -1,12 +1,11 @@
 <!-- CCELL / BLACK CHERRY SAKURA — GitHub Profile README -->
 <div align="center"><a href="https://github.com/vassellenha"><img src="./assets/ccell-hero.gif" width="100%" alt="CCELL — Vassell Enha Atthayya, animated cyber-sakura portfolio header" /></a>
-
+<br />
 <a href="#about"><img src="https://img.shields.io/badge/01-ABOUT-111520?style=for-the-badge&labelColor=F84586&color=111520" alt="About" /></a>
 <a href="#toolkit"><img src="https://img.shields.io/badge/02-TOOLKIT-111520?style=for-the-badge&labelColor=F84586&color=111520" alt="Toolkit" /></a>
 <a href="#work"><img src="https://img.shields.io/badge/03-WORK-111520?style=for-the-badge&labelColor=F84586&color=111520" alt="Projects" /></a>
 <a href="#activity"><img src="https://img.shields.io/badge/04-ACTIVITY-111520?style=for-the-badge&labelColor=F84586&color=111520" alt="Activity" /></a>
 <a href="#connect"><img src="https://img.shields.io/badge/05-CONNECT-111520?style=for-the-badge&labelColor=F84586&color=111520" alt="Connect" /></a>
-
 <a href="https://github.com/vassellenha?tab=repositories"><img src="https://img.shields.io/badge/GitHub-111520?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
 <a href="https://websiteportofoliokelompok5.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-F84586?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio" /></a>
 <a href="https://www.linkedin.com/in/vassell-enha-atthayya-182661323"><img src="https://img.shields.io/badge/LinkedIn-111520?style=flat-square&logo=linkedin&logoColor=F84586" alt="LinkedIn" /></a>
@@ -19,20 +18,17 @@
 <li><b>Learning:</b> Docker, cloud deployment, Vue.js, and Lua</li>
 <li><b>Open to:</b> Full-stack, UI/UX, and game-development collaborations</li>
 <li><b>Beyond code:</b> National BMC and business proposal competition achievements (2026)</li>
-</ul><pre><code>const ccell = {
+</ul></td><td width="32%" align="center" valign="middle"><img src="https://www.sonymusic.co.jp/img/common/artist_image/77709000/77709502/profile/ASA13_17398.jpg" width="100%" alt="Editorial portrait" /></td></tr></table><pre><code>const ccell = {
   role: 'Full-Stack Developer',
   focus: ['web', 'design', 'cloud'],
   principle: 'Build things that work.'
-};</code></pre></td><td width="32%" align="center" valign="middle"><img src="https://www.sonymusic.co.jp/img/common/artist_image/77709000/77709502/profile/ASA13_17398.jpg" width="100%" alt="Editorial portrait" /></td></tr></table>
+};</code></pre>
 <a id="toolkit"></a>
 <img src="./assets/section-02.svg" width="100%" alt="02 / TOOLKIT" />
-<div align="center">
-FRONTEND & INTERFACE
-<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,vue,tailwind,figma&theme=dark&perline=8" alt="Frontend: HTML, CSS, JavaScript, TypeScript, React, Vue, Tailwind and Figma" />
-BACKEND & DATABASES
-<img src="https://skillicons.dev/icons?i=php,laravel,nodejs,mysql,py&theme=dark&perline=5" alt="Backend: PHP, Laravel, Node.js, MySQL, Python" />
-DEVELOPER WORKFLOW
-<img src="https://skillicons.dev/icons?i=git,github,docker,postman,vscode&theme=dark&perline=5" alt="Tools: Git, GitHub, Docker, Postman and VS Code" /></div>
+<div align="center"><p align="center"><strong>FRONTEND &amp; INTERFACE</strong></p>
+<p align="center"><img src="https://skillicons.dev/icons?i=html,css,js,ts,react,vue,tailwind,figma&amp;theme=dark&amp;perline=8" alt="Frontend: HTML, CSS, JavaScript, TypeScript, React, Vue, Tailwind and Figma" /></p><p align="center"><strong>BACKEND &amp; DATABASES</strong></p>
+<p align="center"><img src="https://skillicons.dev/icons?i=php,laravel,nodejs,mysql,py&amp;theme=dark&amp;perline=5" alt="Backend: PHP, Laravel, Node.js, MySQL, Python" /></p><p align="center"><strong>DEVELOPER WORKFLOW</strong></p>
+<p align="center"><img src="https://skillicons.dev/icons?i=git,github,docker,postman,vscode&amp;theme=dark&amp;perline=5" alt="Tools: Git, GitHub, Docker, Postman and VS Code" /></p></div>
 <a id="work"></a>
 <img src="./assets/section-03.svg" width="100%" alt="03 / SELECTED WORK" />
 <table><tr>
