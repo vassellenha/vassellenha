@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#de1024" />
+  <title>CCELL.exe — The Phantom Developer</title>
+  <style>
+    :root { --red: #de1024; --ink: #0a090c; --paper: #faf7ec; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--ink); color: var(--paper); font: 16px/1.55 'DejaVu Sans', Arial, sans-serif; overflow-x: hidden; }
+    body::before { content:''; position:fixed; inset:0; z-index:11; pointer-events:none; opacity:.18; background:repeating-linear-gradient(0deg, transparent 0 3px, #ffffff15 4px 5px); mix-blend-mode:screen; }
+    body::after { content:''; position:fixed; inset:0; z-index:10; pointer-events:none; background-image: radial-gradient(#eee5 1px, transparent 1px); background-size: 17px 17px; opacity:.1; }
+    #cursor { position:fixed; width:26px; height:26px; border:3px solid var(--paper); transform:translate(-50%,-50%) rotate(45deg); pointer-events:none; z-index:40; mix-blend-mode:difference; transition:transform .1s, border-color .2s; }
+    .page { width:min(1160px,96vw); margin:0 auto; }
+    header { position:sticky; top:0; display:flex; justify-content:space-between; gap:16px; align-items:center; background:#0a090cf0; backdrop-filter:blur(12px); padding:12px max(20px,calc((100vw - 1160px)/2)); z-index:25; border-bottom:4px solid var(--red); }
+    header strong { font:900 25px/1 Impact, 'Arial Narrow', sans-serif; color:var(--paper); transform:skew(-8deg); letter-spacing:.03em; }
+    header strong span { color:var(--red); }
+    nav { display:flex; flex-wrap:wrap; gap:4px; }
+    nav a { color:var(--ink); background:var(--paper); padding:8px 11px; font:900 12px/1 monospace; text-decoration:none; transform:skew(-11deg); transition:background .2s, color .2s, translate .2s; }
+    nav a:hover { background:var(--red); color:var(--paper); translate:0 -4px; }
+    .hero { padding:24px 0 8px; position:relative; }
+    .hero::after { content:'AN UNREASONABLE AMOUNT OF STYLE'; position:absolute; right:12px; bottom:36px; font:bold 10px monospace; color:#fffa; letter-spacing:2px; transform:rotate(-4deg); }
+    img { max-width:100%; display:block; }
+    .hero img, .shot img { width:100%; height:auto; }
+    .shot { position:relative; margin:55px 0 16px; filter:drop-shadow(15px 15px 0 #de1024); }
+    .shot::before { content:attr(data-arc); position:absolute; top:-21px; left:16px; padding:4px 10px; background:var(--paper); color:var(--ink); font:bold 12px monospace; z-index:1; transform:rotate(-2deg); }
+    .copy { padding:24px 29px; background:var(--paper); color:var(--ink); clip-path:polygon(0 0,100% 0,97% 100%,1% 97%); margin:10px 14px 32px 0; box-shadow:10px 10px 0 var(--red); }
+    .copy p { font-size:clamp(16px,2.2vw,20px); font-weight:650; max-width:880px; }
+    h2 { font:900 clamp(35px,6vw,68px)/.96 Impact,'Arial Narrow',sans-serif; text-transform:uppercase; margin:12px 0; letter-spacing:-.01em; }
+    .kicker { color:var(--red); font:bold 14px monospace; }
+    .trio { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; margin:35px 0; }
+    .tile { padding:25px; border:4px solid var(--paper); transform:skew(-2deg); min-height:130px; transition:translate .3s, background .3s; }
+    .tile:nth-child(2) { background:var(--red); }
+    .tile:hover { translate:0 -9px; background:var(--red); }
+    .tile h3 { margin:0 0 8px; font:900 26px Impact, sans-serif; }
+    .tile p { margin:0; font:15px/1.7 monospace; }
+    .projects { display:grid; grid-template-columns:1fr 1fr; gap:23px; margin:26px 0; }
+    .project { display:block; position:relative; color:var(--paper); text-decoration:none; overflow:hidden; border:4px solid var(--paper); box-shadow:8px 8px var(--red); transition:transform .24s, filter .24s, box-shadow .24s; }
+    .project:hover { transform:translate(-3px,-10px) rotate(-1deg); filter:contrast(1.14); box-shadow:13px 15px var(--red); }
+    .project::after { content:'OPEN FILE >'; position:absolute; right:0; bottom:0; background:var(--ink); color:var(--paper); padding:4px 13px; font:bold 13px monospace; }
+    .ribbon { background:var(--red); color:var(--paper); margin-top:24px; padding:8px 15px; font:900 18px monospace; transform:rotate(-1deg); }
+    .links { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:28px 0 50px; }
+    .links a { background:var(--red); color:var(--paper); text-decoration:none; padding:17px 25px; font:900 clamp(15px,2vw,25px) Impact,sans-serif; transform:skew(-7deg); border:3px solid var(--paper); box-shadow:6px 6px var(--paper); transition:translate .15s,background .15s; }
+    .links a:hover { translate:0 -7px; background:var(--ink); }
+    .status { color:var(--paper); display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; align-items:center; font:bold 14px monospace; margin:20px 0 33px; }
+    .status a { color:var(--paper); text-underline-offset:5px; }
+    footer { text-align:center; padding:30px 0 90px; font:bold 12px monospace; color:#aaa; }
+    .reveal { opacity:0; transform:translateY(50px) rotate(-1deg); transition:opacity .7s ease,transform .7s cubic-bezier(.17,1,.19,1); }
+    .reveal.seen { opacity:1; transform:none; }
+    .slash { position:fixed; pointer-events:none; height:110vh; width:6px; z-index:14; top:-10vh; background:var(--paper); transform:rotate(21deg); animation:slash .36s ease-out forwards; }
+    @keyframes slash { from{opacity:1;translate:0 0} to{opacity:0;translate:700px 0} }
+    @media (max-width:680px) { header {position:relative;display:block;text-align:center} nav {justify-content:center;margin-top:12px} .trio,.projects{grid-template-columns:1fr} .shot{filter:drop-shadow(6px 7px 0 var(--red))} .hero::after{display:none} #cursor{display:none} }
+    @media (prefers-reduced-motion:reduce) { html {scroll-behavior:auto} .reveal{opacity:1;transform:none} .slash{display:none} }
+  </style>
+</head>
+<body>
+  <div id="cursor" aria-hidden="true"></div>
+  <header>
+    <strong>CCELL<span>.exe</span> // PHANTOM DEVELOPER</strong>
+    <nav aria-label="Menu">
+      <a href="#about">01 ABOUT</a><a href="#arsenal">02 ARSENAL</a>
+      <a href="#missions">03 MISSIONS</a><a href="#status">04 STATUS</a>
+      <a href="#contact">05 CONTACT</a>
+    </nav>
+  </header>
+  <main class="page">
+    <section class="hero"><img src="../assets/motion/01-phantom-hero.gif" alt="CCELL.exe cinematic animated cover" /></section>
+    <div class="ribbon">PRESS START // THIS IS THE UNRESTRICTED PREVIEW, NOT THE GITHUB RENDERER</div>
+
+    <section id="about" class="reveal">
+      <div class="shot" data-arc="ARC 01 / ORIGIN FILE"><img src="../assets/motion/02-personnel-dossier.gif" alt="Personnel dossier animation" loading="lazy" /></div>
+      <div class="copy"><span class="kicker">IDENTITY VERIFIED // CCELL</span>
+        <h2>Meet the operative.</h2>
+        <p>Vassell Enha Atthayya is an Information Systems student at Telkom University, exploring full-stack web engineering, UI/UX, and the satisfaction of taking an idea all the way from database to deployment.</p>
+        <p>Design the experience. Build the system. Ship the thing.</p>
+      </div>
+    </section>
+
+    <section id="arsenal" class="reveal">
+      <div class="shot" data-arc="ARC 02 / EQUIPMENT"><img src="../assets/motion/03-phantom-arsenal.gif" alt="Phantom Arsenal animation" loading="lazy" /></div>
+      <div class="trio">
+        <div class="tile"><h3>FRONTEND</h3><p>HTML / CSS / JS / TS / React / Vue / Tailwind / Figma</p></div>
+        <div class="tile"><h3>BACKEND</h3><p>PHP / Laravel / Node.js / MySQL / Python / REST APIs</p></div>
+        <div class="tile"><h3>EXPERIMENTS</h3><p>Git / GitHub / Postman / Docker / Cloud / Lua / Roblox</p></div>
+      </div>
+    </section>
+
+    <section id="missions" class="reveal">
+      <div class="shot" data-arc="ARC 03 / CONTRACTS"><img src="../assets/motion/04-mission-select.gif" alt="Mission selection animation" loading="lazy" /></div>
+      <div class="projects">
+        <a class="project" href="https://github.com/vassellenha/KWU-BRREAD"><img src="../assets/posters/mission-01.gif" alt="BRREAD mission" loading="lazy" /></a>
+        <a class="project" href="https://github.com/vassellenha/CatchAndClash_Roblox_Project"><img src="../assets/posters/mission-02.gif" alt="Catch and Clash mission" loading="lazy" /></a>
+        <a class="project" href="https://github.com/vassellenha/AMANIN-Project"><img src="../assets/posters/mission-03.gif" alt="AMANIN mission" loading="lazy" /></a>
+        <a class="project" href="https://github.com/vassellenha/PHARVIA-Project"><img src="../assets/posters/mission-04.gif" alt="PHARVIA mission" loading="lazy" /></a>
+        <a class="project" href="https://github.com/vassellenha/PRAKTIKUM_UI-LANJUT_VASSELL-ENHA-ATTHAYYA_102042300140"><img src="../assets/posters/mission-05.gif" alt="Vue UI Lab mission" loading="lazy" /></a>
+        <a class="project" href="https://github.com/vassellenha?tab=repositories"><img src="../assets/posters/mission-06.gif" alt="All repositories" loading="lazy" /></a>
+      </div>
+    </section>
+
+    <section id="status" class="reveal">
+      <div class="shot" data-arc="ARC 04 / NEVER STOP"><img src="../assets/motion/05-operation-pulse.gif" alt="Decorative development pulse animation" loading="lazy" /></div>
+      <div class="status"><span>DESIGN → BUILD → TEST → SHIP</span><a href="https://github.com/vassellenha?tab=overview">SEE REAL GITHUB ACTIVITY ↗</a></div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <div class="shot" data-arc="ARC 05 / SOCIAL LINK"><img src="../assets/motion/06-social-link.gif" alt="Social link animation" loading="lazy" /></div>
+      <div class="links">
+        <a href="https://github.com/vassellenha">GITHUB</a>
+        <a href="https://www.linkedin.com/in/vassell-enha-atthayya-182661323/">LINKEDIN</a>
+        <a href="https://instagram.com/vassellenha">INSTAGRAM</a>
+        <a href="https://websiteportofoliokelompok5.vercel.app/">PORTFOLIO</a>
+      </div>
+      <img src="../assets/motion/07-steal-the-show.gif" alt="Steal the show finale" loading="lazy" />
+    </section>
+  </main>
+  <footer>CCELL.exe / PERSONA-INSPIRED ORIGINAL ART & MOTION // 2026<br/>A FAN-INSPIRED DESIGN CONCEPT, NOT AN OFFICIAL ATLUS PRODUCT.</footer>
+  <script>
+    const cursor = document.querySelector('#cursor');
+    addEventListener('pointermove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    }, {passive:true});
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('seen'); observer.unobserve(entry.target); }
+    }), {threshold:.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll('nav a').forEach(el => el.addEventListener('click', () => {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const s = document.createElement('div'); s.className = 'slash';
+      s.style.left = 25 + Math.random()*30 + 'vw'; document.body.append(s);
+      setTimeout(() => s.remove(), 450);
+    }));
+  </script>
+</body>
+</html>

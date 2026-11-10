@@ -1,28 +1,37 @@
-# Install on GitHub
+# Install the Phantom Developer README
 
-**Upload the entire contents of this package to the root of `vassellenha/vassellenha`.** Do not upload only README.md, and do not upload the ZIP itself.
+1. Extract `CCELL-PHANTOM-DEVELOPER.zip`.
+2. Open your GitHub profile repository: **`vassellenha/vassellenha`**. If it doesn't exist, create a public repository named exactly `vassellenha` under that account.
+3. Upload `README.md` and the **complete `assets/` folder** to the repository root, preserving relative paths.
+4. Commit the files, then open `https://github.com/vassellenha` to see the actual profile.
 
-Required structure:
+The project contains `showcase/` and `scripts/` for local previews and future editing. They are optional for display, but keep them if you want reproducible source assets. The `archive/` folder preserves the previous ZIP; it does not need to be uploaded.
 
-```text
-README.md
-assets/
-  ccell-hero.gif, ccell-hero-preview.png        (unchanged sakura header)
-  section-01.svg ... section-05.svg             (unchanged)
-  project-brread.png, project-catchclash.png    (unchanged)
-  development-loop.svg, footer.svg, icon-*.svg  (unchanged)
-  --- new in this version ---
-  typing-roles.svg, divider-petals.svg
-  sakura-reef.svg, shark-vs-commits.svg
-  stack-orbit.svg, journey-path.svg
-  project-amanin.svg, project-pharvia.svg, project-vuelab.svg, project-more.svg
-  btn-github.svg, btn-linkedin.svg, btn-instagram.svg, btn-portfolio.svg
+## Important differences from typical README templates
+
+- **13 motion graphics** are actual pre-rendered animated GIF files (7 full-width sequences and 6 mission dossiers), so they do not depend on inline JavaScript or CSS in GitHub.
+- **5 navigation cards** link directly to profile sections.
+- The colors and shape vocabulary are Persona 5-inspired, but the illustrations, typography compositions and fictional mask design are custom-created for this project.
+- The README contains human-readable profile data, project descriptions, and meaningful alternative text for every animation.
+- The only remote visual is the live streak card, which may fail if the third-party provider is unavailable. The profile remains functional without it.
+- The graphic contribution grid is explicitly **decorative**, not fake live statistics.
+
+## Re-render the motion graphics
+
+Requires Python 3, Pillow, and FFmpeg with palette filters:
+
+```bash
+python3 -m pip install pillow
+python3 scripts/render.py --cards
 ```
 
-On GitHub choose **Add file > Upload files** and drag the extracted files in (keep the `assets` folder structure).
+The render pipeline creates RGB frames and converts them to 256-color looping GIFs with a dedicated motion palette. First-frame PNGs also live in `assets/motion/` for review/fallback. You can use `--only 01-phantom-hero` to regenerate only the hero, `--only static` for posters/navigation, or `--preview-only` to create static animation previews quickly.
 
-## Notes
+## Source content preserved
 
-- All new `assets/*.svg` are self-contained animated SVGs (pure SMIL, no scripts, no external requests), so they cannot "error out" and they animate inside a GitHub README.
-- GitHub strips JavaScript and CSS from READMEs. The interactive bits are the animated visuals, anchor navigation and the 3D torii (`stl` code block: drag to rotate).
-- No third-party stat cards are used any more (stats, top languages, activity graph, trophies, snake): they broke when those services were down or not set up. The only external pictures left are the shields.io nav badges, the skillicons in About, the streak card and the ASA portrait (Sony Music URL).
+- Name/alias, Telkom University, areas of work, learning interests, and competition mentions.
+- Five individual project destinations and the all-repositories link.
+- GitHub, LinkedIn, Instagram, and the portfolio link.
+- The original input ZIP is preserved in `archive/`.
+
+You may freely replace personal information or links in `README.md`. Nothing has been pushed to GitHub; upload/commit is your decision.
