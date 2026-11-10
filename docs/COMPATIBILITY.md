@@ -1,26 +1,29 @@
-# GitHub profile compatibility / known constraints
+# GitHub Rendering and Release QA
 
-This package favors compatibility over making unsupported claims about GitHub's Markdown sanitizer.
+## Actual README behavior
 
-- GitHub does **not** provide arbitrary README JavaScript, WebGL, unrestricted inline CSS, or scroll-driven frontend animation. The motion is **pre-rendered GIF** inside ordinary `<img>` tags.
-- Internal Markdown-style anchors use `<a id="...">` and work independently of animation. The images are linked to actual GitHub project destinations.
-- Links are unchanged from the user's supplied profile/previous README; **not independently verified online** in this environment.
-- GIFs may be expensive to download on mobile; this is a deliberate maximalist choice. GitHub or user accessibility settings may pause/reduce animation. The profile content is still present as text and alternative text.
-- GitHub may proxy and cache images, so changes to replaced GIFs can take some time to show. Renaming changed assets avoids stale proxy caches.
-- There are no remote status images. The animated grid is decorative, and the fully designed activity button links to the user's real GitHub overview.
-- The old HTML/STL easter egg and unrelated editorial portrait were not reused in the live README; the old ZIP is preserved separately.
+- GitHub README contains only standard Markdown plus image/link HTML supported by GitHub's renderer. No README scripts, iframes, CSS animations, canvas elements or web-hosted media players are required.
+- Every image path points to the local, fresh `assets/overdrive5/` namespace to avoid prior cache collisions.
+- Animated navigation and project cards are clickable `<a><img /></a>` pairs, not interactive web applications.
+- Main text is embedded in the motion artwork; all 34 image references have descriptive alternative text.
+- Activity graphics are labeled as illustrative, while the real GitHub overview link remains functional.
+- The separate HTML `showcase/index.html` has decorative hover/reveal effects, but it is not needed for GitHub playback.
 
-## Verification checklist
+## Limitations
 
-- [x] No script elements in README
-- [x] Every local image path checked by validation script
-- [x] Every local animated asset is pre-rendered as a real GIF
-- [x] Profile facts and real project links retained
-- [x] No ordinary Markdown tables or default visible links in the README
-- [x] OC artwork uses the supplied character reference with natural eyes
-- [x] Static first-frame previews provided
-- [ ] Upload and verify on GitHub itself (requires the repository owner)
+GitHub image proxies and client accessibility controls may pause or cache animation; GIF playback on some mobile devices may lag. These are intrinsic constraints of an intentionally extravagant profile. A single GIF never requires external authentication or remote media service.
 
-## GIF quality notes
+GitHub browser uploads accept regular files up to 25 MiB each; Git tracks larger files with warnings above 50 MiB and blocks files above 100 MiB in ordinary repositories. The release verifier checks that every individual GIF stays beneath the browser upload ceiling.
 
-Animated GIFs are 256-color by format. The renderer quantizes with FFmpeg palettegen / paletteuse and Bayer dithering to keep reds and whites clean. The master rendering is in full RGB. No web-hosted JavaScript or untrusted runtime animation is required.
+## Release checklist
+
+- [x] 34 separate locally packaged animated GIFs, not static placeholders.
+- [x] Exactly one hero function composits the supplied OC illustration.
+- [x] Distinct original art for projects, skills, identity, activity and contact.
+- [x] Personal portfolio and source repository links use owner-specified URLs.
+- [x] No stale placeholder identity or misleading crime-themed copy.
+- [x] No normal Markdown tables or default stock badges in the README.
+- [x] Current source, previews, installation instructions and compatibility notes bundled.
+- [ ] Verify the committed result directly on GitHub after the repository owner uploads it.
+
+`python3 scripts/validate_v5.py` is the final mechanical asset/path/frame check.

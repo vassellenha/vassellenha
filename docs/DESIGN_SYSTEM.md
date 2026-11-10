@@ -1,34 +1,25 @@
-# Vassell / Phantom Developer — motion design specification
+# Vassell / Absolute Overdrive — Motion and Art Direction
 
-## Art direction
+## Visual identity
 
-An original, maximalist graphic design inspired by the dramatic UI vocabulary of Persona 5. It uses comic-book halftones, angular black slabs, giant typography, screen-printed textures, hard-edged title masks, rapid graphics, tilted labels, and white ink on vivid red. The main character asset is Vassell's **own supplied OC artwork**, with his masked face and pose preserved; it is **not** an official Persona character.
+An original high-contrast motion-design system inspired by the dramatic rhythm of Japanese game menus and the editorial geometry of modern comic book interfaces. No official game assets, logos or sounds are included.
 
-## Palette
+Colors: crimson `#DE1024`, near-black `#0A090C`, off-white `#FAF7EC`, occasional yellow `#FDC331`. Source typography is DejaVu Sans Condensed / DejaVu Sans Mono, available locally for reproducible rendering.
 
-| Role | Color |
-| --- | --- |
-| Phantom red | `#DE1024` |
-| Signal red | `#FA222F` |
-| Ink black | `#0A090C` |
-| Off-white paper | `#FAF7EC` |
-| Optional spotlight | `#FFDD4D` |
+## Intentional variety
 
-## Choreography
+- **Hero:** the sole character-driven section; carefully preserves Vassell's own OC facial details, outfit and mask. Two distinctive title acts communicate professional identity and ADAPT / IMPROVE / OVERCOME.
+- **About:** paper-collage identity sheet with a purely geometric origami illustration and secondary staged process banners.
+- **Arsenal:** radial technical dial and three independently colored technical cards; symbols represent systems rather than people.
+- **Projects:** animated mission-selection gate, browser-interface feature, source-code CTA, project map, then six original project-specific illustrations.
+- **Activity:** modular decorative status display paired with a true GitHub link and a software-delivery sequence.
+- **Contact:** abstract signal/connection graphic plus four platform-appropriate animated interface cards.
+- **Finale:** cinematic kinetic editorial title with an additional signature screen.
 
-1. **Hero:** original OC art as the hero plate, branded type planes, analog glitch and a second-act dramatic wipe.
-2. **Dossier:** dramatic identity title, angular portrait crop of the supplied OC, and character ID.
-3. **Technical skills:** rotating target reticles and periodically highlighted technology categories.
-4. **Projects:** selected-projects screen with a moving row of diamond markers.
-5. **Pulse:** decorative commit-like tile field that undulates with a traveling wave; real stats are kept separate.
-6. **Social:** orbiting message pips around oversized animated interface envelope.
-7. **Outro:** offbeat graphic shards oscillate behind a large closing statement.
-8. **Project cards:** all six get independent moving scanner sweeps and analog line distortions.
+No portrait, character silhouette, mask logo, character-derived badge or other OC visual appears outside the hero section.
 
-All frames are generated mathematically with deterministic seeds to preserve a coherent aesthetic. There is no JavaScript embedded in the README, no autoplay video requirement, and no external art asset host.
+## Timing and production
 
-## Production and editability
+Animations use deterministic waveform and interpolation timing with composited polygon masks, line work, changing radial arcs, traveling highlights, animated halftone/texture, and repeated print artifacts. `scripts/overdrive.py` generates lossless RGB master frames before FFmpeg palettegen/paletteuse converts them to 256-color looping GIFs. FPS defaults to 20 and can be adjusted.
 
-`scripts/render.py` contains custom drawing geometry, layout, text and animation timing. It generates project posters, navigation cards, full-width GIF sequences, and preview PNGs, integrating the user's `assets/source/vassell-oc.png` unchanged into the collage. Source typography uses DejaVu Sans Condensed and DejaVu Sans Mono fonts, avoiding a remote-font dependency.
-
-At GitHub's practical 800–900px article width, the important title text is large enough to remain legible. Essential identity and project information is also included as descriptive image alternative text in `README.md` while the visible presentation remains fully designed.
+Per-asset preview PNGs are included for fast inspection, and source code is retained for continuous iteration.

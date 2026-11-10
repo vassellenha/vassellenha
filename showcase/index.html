@@ -1,130 +1,102 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#de1024" />
-  <title>VASSELL — The Phantom Developer</title>
-  <style>
-    :root { --red: #de1024; --ink: #0a090c; --paper: #faf7ec; }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--ink); color: var(--paper); font: 16px/1.55 'DejaVu Sans', Arial, sans-serif; overflow-x: hidden; }
-    body::before { content:''; position:fixed; inset:0; z-index:11; pointer-events:none; opacity:.18; background:repeating-linear-gradient(0deg, transparent 0 3px, #ffffff15 4px 5px); mix-blend-mode:screen; }
-    body::after { content:''; position:fixed; inset:0; z-index:10; pointer-events:none; background-image: radial-gradient(#eee5 1px, transparent 1px); background-size: 17px 17px; opacity:.1; }
-    #cursor { position:fixed; width:26px; height:26px; border:3px solid var(--paper); transform:translate(-50%,-50%) rotate(45deg); pointer-events:none; z-index:40; mix-blend-mode:difference; transition:transform .1s, border-color .2s; }
-    .page { width:min(1160px,96vw); margin:0 auto; }
-    header { position:sticky; top:0; display:flex; justify-content:space-between; gap:16px; align-items:center; background:#0a090cf0; backdrop-filter:blur(12px); padding:12px max(20px,calc((100vw - 1160px)/2)); z-index:25; border-bottom:4px solid var(--red); }
-    header strong { font:900 25px/1 Impact, 'Arial Narrow', sans-serif; color:var(--paper); transform:skew(-8deg); letter-spacing:.03em; }
-    header strong span { color:var(--red); }
-    nav { display:flex; flex-wrap:wrap; gap:4px; }
-    nav a { color:var(--ink); background:var(--paper); padding:8px 11px; font:900 12px/1 monospace; text-decoration:none; transform:skew(-11deg); transition:background .2s, color .2s, translate .2s; }
-    nav a:hover { background:var(--red); color:var(--paper); translate:0 -4px; }
-    .hero { padding:24px 0 8px; position:relative; }
-    .hero::after { content:'VASSELL / PROFESSIONAL PORTFOLIO'; position:absolute; right:12px; bottom:36px; font:bold 10px monospace; color:#fffa; letter-spacing:2px; transform:rotate(-4deg); }
-    img { max-width:100%; display:block; }
-    .hero img, .shot img { width:100%; height:auto; }
-    .shot { position:relative; margin:55px 0 16px; filter:drop-shadow(15px 15px 0 #de1024); }
-    .shot::before { content:attr(data-arc); position:absolute; top:-21px; left:16px; padding:4px 10px; background:var(--paper); color:var(--ink); font:bold 12px monospace; z-index:1; transform:rotate(-2deg); }
-    .copy { padding:24px 29px; background:var(--paper); color:var(--ink); clip-path:polygon(0 0,100% 0,97% 100%,1% 97%); margin:10px 14px 32px 0; box-shadow:10px 10px 0 var(--red); }
-    .copy p { font-size:clamp(16px,2.2vw,20px); font-weight:650; max-width:880px; }
-    h2 { font:900 clamp(35px,6vw,68px)/.96 Impact,'Arial Narrow',sans-serif; text-transform:uppercase; margin:12px 0; letter-spacing:-.01em; }
-    .kicker { color:var(--red); font:bold 14px monospace; }
-    .trio { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; margin:35px 0; }
-    .tile { padding:25px; border:4px solid var(--paper); transform:skew(-2deg); min-height:130px; transition:translate .3s, background .3s; }
-    .tile:nth-child(2) { background:var(--red); }
-    .tile:hover { translate:0 -9px; background:var(--red); }
-    .tile h3 { margin:0 0 8px; font:900 26px Impact, sans-serif; }
-    .tile p { margin:0; font:15px/1.7 monospace; }
-    .projects { display:grid; grid-template-columns:1fr 1fr; gap:23px; margin:26px 0; }
-    .project { display:block; position:relative; color:var(--paper); text-decoration:none; overflow:hidden; border:4px solid var(--paper); box-shadow:8px 8px var(--red); transition:transform .24s, filter .24s, box-shadow .24s; }
-    .project:hover { transform:translate(-3px,-10px) rotate(-1deg); filter:contrast(1.14); box-shadow:13px 15px var(--red); }
-    .project::after { content:'VIEW PROJECT >'; position:absolute; right:0; bottom:0; background:var(--ink); color:var(--paper); padding:4px 13px; font:bold 13px monospace; }
-    .ribbon { background:var(--red); color:var(--paper); margin-top:24px; padding:8px 15px; font:900 18px monospace; transform:rotate(-1deg); }
-    .links { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:28px 0 50px; }
-    .links a { background:var(--red); color:var(--paper); text-decoration:none; padding:17px 25px; font:900 clamp(15px,2vw,25px) Impact,sans-serif; transform:skew(-7deg); border:3px solid var(--paper); box-shadow:6px 6px var(--paper); transition:translate .15s,background .15s; }
-    .links a:hover { translate:0 -7px; background:var(--ink); }
-    .status { color:var(--paper); display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; align-items:center; font:bold 14px monospace; margin:20px 0 33px; }
-    .status a { color:var(--paper); text-underline-offset:5px; }
-    footer { text-align:center; padding:30px 0 90px; font:bold 12px monospace; color:#aaa; }
-    .reveal { opacity:0; transform:translateY(50px) rotate(-1deg); transition:opacity .7s ease,transform .7s cubic-bezier(.17,1,.19,1); }
-    .reveal.seen { opacity:1; transform:none; }
-    .slash { position:fixed; pointer-events:none; height:110vh; width:6px; z-index:14; top:-10vh; background:var(--paper); transform:rotate(21deg); animation:slash .36s ease-out forwards; }
-    @keyframes slash { from{opacity:1;translate:0 0} to{opacity:0;translate:700px 0} }
-    @media (max-width:680px) { header {position:relative;display:block;text-align:center} nav {justify-content:center;margin-top:12px} .trio,.projects{grid-template-columns:1fr} .shot{filter:drop-shadow(6px 7px 0 var(--red))} .hero::after{display:none} #cursor{display:none} }
-    @media (prefers-reduced-motion:reduce) { html {scroll-behavior:auto} .reveal{opacity:1;transform:none} .slash{display:none} }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#de1024" />
+<title>VASSELL / ABSOLUTE OVERDRIVE V5</title>
+<style>
+  :root{--red:#de1024;--ink:#0a090c;--paper:#faf7ec;--gold:#fdc331}
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--paper);margin:0;font-family:Arial,sans-serif;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;z-index:20;pointer-events:none;background-image:radial-gradient(#fff2 1px,transparent 1px);background-size:13px 13px;opacity:.18}
+  header{position:sticky;top:0;z-index:30;background:#0a090cf2;border-bottom:5px solid var(--red);display:flex;gap:20px;align-items:center;justify-content:space-between;padding:14px max(20px,calc((100% - 1240px)/2))}
+  header strong{font:bold 25px/1 Impact,'Arial Narrow',sans-serif;letter-spacing:1px;transform:skew(-7deg)}
+  header strong em{color:var(--red);font-style:normal}
+  nav{display:flex;gap:6px;flex-wrap:wrap} nav a{background:var(--paper);color:var(--ink);padding:8px 13px;text-decoration:none;font:bold 12px monospace;transform:skew(-12deg);transition:background .2s,translate .2s}
+  nav a:hover{background:var(--red);color:white;translate:0 -5px}
+  main{width:min(1200px,96vw);margin:auto}section{margin:40px 0 66px;scroll-margin-top:90px}
+  .hero{margin-top:22px}img{display:block;max-width:100%;height:auto}a{color:inherit}
+  .graphic{width:100%;filter:drop-shadow(7px 8px 0 var(--red));margin:22px auto}
+  .navigation{display:flex;gap:7px;justify-content:center;margin:18px auto 30px}
+  .navigation a{width:19.3%;transition:transform .22s}.navigation a:hover{transform:translateY(-6px)}
+  .navigation img{width:100%}
+  .featured{display:block;margin:27px auto;filter:drop-shadow(10px 10px 0 var(--red));transition:transform .25s}
+  .featured:hover{transform:translateY(-8px) rotate(-.4deg)}.featured img{width:100%}
+  .tiles{display:grid;grid-template-columns:1fr 1fr;gap:23px;margin:24px 0}
+  .tiles a{display:block;border:4px solid var(--paper);box-shadow:8px 9px var(--red);transition:transform .2s,box-shadow .2s;position:relative}
+  .tiles a:hover{transform:translate(-2px,-8px);box-shadow:12px 15px var(--red)}
+  .tiles img{width:100%}.tiles a::after{content:'OPEN >';position:absolute;bottom:0;right:0;background:var(--ink);color:var(--paper);font:bold 12px monospace;padding:4px 12px}
+  .section-head{font:900 clamp(35px,6vw,76px)/.85 Impact,'Arial Narrow',sans-serif;text-transform:uppercase;border-left:12px solid var(--red);padding-left:14px;margin:65px 0 36px;letter-spacing:.5px}
+  .section-head small{display:block;font:800 13px/1.8 monospace;color:var(--red);margin-top:17px}
+  .reveal{opacity:0;transform:translateY(46px);transition:opacity .65s,transform .65s cubic-bezier(.16,1,.3,1)}.reveal.visible{opacity:1;transform:none}
+  footer{text-align:center;color:#a5a5ab;padding:18px 0 80px;font:bold 11px/2 monospace}
+  @media(max-width:720px){header{position:relative;display:block;text-align:center}nav{justify-content:center;margin:14px 0 0}.tiles{gap:12px}.tiles a{border-width:2px;box-shadow:4px 5px var(--red)}.section-head{margin:35px 0 25px}.graphic{filter:drop-shadow(4px 5px 0 var(--red))}}
+  @media(max-width:530px){.tiles{grid-template-columns:1fr}.navigation{gap:1px}header strong{font-size:20px}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}*{transition:none!important}}
+</style>
 </head>
 <body>
-  <div id="cursor" aria-hidden="true"></div>
-  <header>
-    <strong>VASSELL<span> / </span> DEVELOPER PORTFOLIO</strong>
-    <nav aria-label="Menu">
-      <a href="#about">01 ABOUT</a><a href="#arsenal">02 SKILLS</a>
-      <a href="#missions">03 PROJECTS</a><a href="#status">04 ACTIVITY</a>
-      <a href="#contact">05 CONTACT</a>
-    </nav>
-  </header>
-  <main class="page">
-    <section class="hero"><img src="../assets/motion/01-phantom-hero.gif" alt="Vassell's OC cinematic animated cover" /></section>
-    <div class="ribbon">PORTFOLIO PREVIEW // GITHUB-COMPATIBLE VISUAL ASSETS</div>
-
-    <section id="about" class="reveal">
-      <div class="shot" data-arc="SECTION 01 / PROFILE"><img src="../assets/motion/02-personnel-dossier.gif" alt="Professional profile animation" loading="lazy" /></div>
-      <img src="../assets/motion/02c-bio-manifesto.gif" alt="Vassell's illustrated personal manifesto" loading="lazy" />
-      <img src="../assets/motion/02b-identity-board.gif" alt="Identity, university, interests and learning missions in custom designed cards" loading="lazy" />
-    </section>
-
-    <section id="arsenal" class="reveal">
-      <div class="shot" data-arc="SECTION 02 / SKILLS"><img src="../assets/motion/03-phantom-arsenal.gif" alt="Technical skills animation" loading="lazy" /></div>
-      <img src="../assets/motion/03b-skill-board.gif" alt="Three fully illustrated tech stack cards" loading="lazy" />
-    </section>
-
-    <section id="missions" class="reveal">
-      <div class="shot" data-arc="SECTION 03 / PROJECTS"><img src="../assets/motion/04-mission-select.gif" alt="Selected projects animation" loading="lazy" /></div>
-      <div class="projects">
-        <a class="project" href="https://github.com/vassellenha/KWU-BRREAD"><img src="../assets/posters/mission-01.gif" alt="BRREAD mission" loading="lazy" /></a>
-        <a class="project" href="https://github.com/vassellenha/CatchAndClash_Roblox_Project"><img src="../assets/posters/mission-02.gif" alt="Catch and Clash mission" loading="lazy" /></a>
-        <a class="project" href="https://github.com/vassellenha/AMANIN-Project"><img src="../assets/posters/mission-03.gif" alt="AMANIN mission" loading="lazy" /></a>
-        <a class="project" href="https://github.com/vassellenha/PHARVIA-Project"><img src="../assets/posters/mission-04.gif" alt="PHARVIA mission" loading="lazy" /></a>
-        <a class="project" href="https://github.com/vassellenha/PRAKTIKUM_UI-LANJUT_VASSELL-ENHA-ATTHAYYA_102042300140"><img src="../assets/posters/mission-05.gif" alt="Vue UI Lab mission" loading="lazy" /></a>
-        <a class="project" href="https://github.com/vassellenha?tab=repositories"><img src="../assets/posters/mission-06.gif" alt="All repositories" loading="lazy" /></a>
-      </div>
-    </section>
-
-    <section id="status" class="reveal">
-      <div class="shot" data-arc="SECTION 04 / ACTIVITY"><img src="../assets/motion/05-operation-pulse.gif" alt="Decorative development activity animation" loading="lazy" /></div>
-      <a href="https://github.com/vassellenha?tab=overview"><img src="../assets/motion/05b-status-link.gif" alt="View real GitHub activity" loading="lazy" /></a>
-    </section>
-
-    <section id="contact" class="reveal">
-      <div class="shot" data-arc="SECTION 05 / CONTACT"><img src="../assets/motion/06-social-link.gif" alt="Contact and collaboration animation" loading="lazy" /></div>
-      <div class="projects">
-        <a class="project" href="https://github.com/vassellenha"><img src="../assets/links/contact-01.gif" alt="GitHub" loading="lazy" /></a>
-        <a class="project" href="https://www.linkedin.com/in/vassell-enha-atthayya-182661323/"><img src="../assets/links/contact-02.gif" alt="LinkedIn" loading="lazy" /></a>
-        <a class="project" href="https://instagram.com/vassellenha"><img src="../assets/links/contact-03.gif" alt="Instagram" loading="lazy" /></a>
-        <a class="project" href="https://websiteportofoliokelompok5.vercel.app/"><img src="../assets/links/contact-04.gif" alt="Portfolio" loading="lazy" /></a>
-      </div>
-      <img src="../assets/motion/07-professional-finale.gif" alt="Build with Purpose closing animation" loading="lazy" />
-    </section>
-  </main>
-  <footer>VASSELL / PERSONA-INSPIRED MOTION DESIGN // 2026<br/>A FAN-INSPIRED DESIGN CONCEPT, NOT AN OFFICIAL ATLUS PRODUCT.</footer>
-  <script>
-    const cursor = document.querySelector('#cursor');
-    addEventListener('pointermove', e => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    }, {passive:true});
-    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (entry.isIntersecting) { entry.target.classList.add('seen'); observer.unobserve(entry.target); }
-    }), {threshold:.08});
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    document.querySelectorAll('nav a').forEach(el => el.addEventListener('click', () => {
-      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      const s = document.createElement('div'); s.className = 'slash';
-      s.style.left = 25 + Math.random()*30 + 'vw'; document.body.append(s);
-      setTimeout(() => s.remove(), 450);
-    }));
-  </script>
+<header>
+  <strong>VASSELL <em>/</em> ABSOLUTE OVERDRIVE</strong>
+  <nav aria-label="Sections"><a href="#about">ABOUT</a><a href="#arsenal">ARSENAL</a><a href="#projects">PROJECTS</a><a href="#activity">ACTIVITY</a><a href="#contact">CONTACT</a></nav>
+</header>
+<main>
+  <div class="hero"><img src="../assets/overdrive5/motion/01-hero-cinematic.gif" alt="Vassell original-character hero animation" /></div>
+  <div class="navigation">
+    <a href="#about"><img src="../assets/overdrive5/navigation/nav-01.gif" alt="About" /></a>
+    <a href="#arsenal"><img src="../assets/overdrive5/navigation/nav-02.gif" alt="Skills" /></a>
+    <a href="#projects"><img src="../assets/overdrive5/navigation/nav-03.gif" alt="Projects" /></a>
+    <a href="#activity"><img src="../assets/overdrive5/navigation/nav-04.gif" alt="Activity" /></a>
+    <a href="#contact"><img src="../assets/overdrive5/navigation/nav-05.gif" alt="Contact" /></a>
+  </div>
+  <section id="about" class="reveal"><h2 class="section-head">01 / About<small>PERSONNEL RECORD // PROFESSIONAL IDENTITY</small></h2>
+    <img class="graphic" src="../assets/overdrive5/motion/02-personnel-record.gif" alt="Personnel record" />
+    <img class="graphic" src="../assets/overdrive5/motion/02b-concept-to-implementation.gif" alt="Concept to implementation" />
+    <img class="graphic" src="../assets/overdrive5/interludes/interlude-01.gif" alt="Analyze design build" />
+  </section>
+  <section id="arsenal" class="reveal"><h2 class="section-head">02 / Arsenal<small>ORIGINAL TECHNICAL INTERFACE</small></h2>
+    <img class="graphic" src="../assets/overdrive5/motion/03-technical-arsenal.gif" alt="Technical skills" />
+    <img class="graphic" src="../assets/overdrive5/motion/03b-stack-deck.gif" alt="Skill deck" />
+    <img class="graphic" src="../assets/overdrive5/interludes/interlude-02.gif" alt="Engineering is creative work" />
+  </section>
+  <section id="projects" class="reveal"><h2 class="section-head">03 / Projects<small>FEATURED PERSONAL PORTFOLIO + SELECTED REPOSITORIES</small></h2>
+    <img class="graphic" src="../assets/overdrive5/motion/04-project-selector.gif" alt="Project selector" />
+    <a class="featured" href="https://takeyourcode.vercel.app/#home"><img src="../assets/overdrive5/motion/04b-featured-portfolio.gif" alt="Personal portfolio" /></a>
+    <a class="featured" href="https://github.com/vassellenha/Portofolio-Vassell-Persona-Inspired"><img src="../assets/overdrive5/motion/04c-source-repository.gif" alt="Portfolio source code" /></a>
+    <img class="graphic" src="../assets/overdrive5/motion/04d-project-index.gif" alt="Project index" />
+    <div class="tiles">
+      <a href="https://github.com/vassellenha/KWU-BRREAD"><img src="../assets/overdrive5/projects/project-01.gif" alt="BRREAD" /></a>
+      <a href="https://github.com/vassellenha/CatchAndClash_Roblox_Project"><img src="../assets/overdrive5/projects/project-02.gif" alt="Catch and Clash" /></a>
+      <a href="https://github.com/vassellenha/AMANIN-Project"><img src="../assets/overdrive5/projects/project-03.gif" alt="AMANIN" /></a>
+      <a href="https://github.com/vassellenha/PHARVIA-Project"><img src="../assets/overdrive5/projects/project-04.gif" alt="PHARVIA" /></a>
+      <a href="https://github.com/vassellenha/PRAKTIKUM_UI-LANJUT_VASSELL-ENHA-ATTHAYYA_102042300140"><img src="../assets/overdrive5/projects/project-05.gif" alt="Vue UI Lab" /></a>
+      <a href="https://github.com/vassellenha?tab=repositories"><img src="../assets/overdrive5/projects/project-06.gif" alt="More projects" /></a>
+    </div>
+    <img class="graphic" src="../assets/overdrive5/interludes/interlude-03.gif" alt="From ideas to products" />
+  </section>
+  <section id="activity" class="reveal"><h2 class="section-head">04 / Activity<small>DECORATIVE MOTION ART + LIVE GITHUB LINK</small></h2>
+    <img class="graphic" src="../assets/overdrive5/motion/05-development-center.gif" alt="Illustrative development command center" />
+    <img class="graphic" src="../assets/overdrive5/motion/05b-delivery-pipeline.gif" alt="Software delivery pipeline" />
+    <a class="featured" href="https://github.com/vassellenha?tab=overview"><img src="../assets/overdrive5/motion/05c-live-activity-link.gif" alt="Real GitHub activity" /></a>
+  </section>
+  <section id="contact" class="reveal"><h2 class="section-head">05 / Contact<small>PERSONAL LINKS + COLLABORATION</small></h2>
+    <img class="graphic" src="../assets/overdrive5/motion/06-contact-portal.gif" alt="Contact portal" />
+    <div class="tiles">
+      <a href="https://github.com/vassellenha"><img src="../assets/overdrive5/contact/contact-01.gif" alt="GitHub" /></a>
+      <a href="https://www.linkedin.com/in/vassell-enha-atthayya-182661323/"><img src="../assets/overdrive5/contact/contact-02.gif" alt="LinkedIn" /></a>
+      <a href="https://instagram.com/vassellenha"><img src="../assets/overdrive5/contact/contact-03.gif" alt="Instagram" /></a>
+      <a href="https://takeyourcode.vercel.app/#home"><img src="../assets/overdrive5/contact/contact-04.gif" alt="Personal portfolio" /></a>
+    </div>
+    <img class="graphic" src="../assets/overdrive5/motion/06b-collaboration.gif" alt="Collaboration" />
+    <a href="#top"><img class="graphic" src="../assets/overdrive5/motion/07-grand-finale.gif" alt="Build with purpose" /></a>
+    <a href="#top"><img class="graphic" src="../assets/overdrive5/motion/07b-signature.gif" alt="Vassell signature" /></a>
+  </section>
+</main>
+<footer>VASSELL ENHA ATTHAYYA / PERSONA-INSPIRED ORIGINAL FAN ART DIRECTION<br />NOT AN OFFICIAL ATLUS PRODUCT. THIS IS A LOCAL SHOWCASE; GITHUB USES PRE-RENDERED GIFS.</footer>
+<script>
+  const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.04});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
 </body>
 </html>
