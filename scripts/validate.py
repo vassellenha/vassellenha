@@ -21,9 +21,13 @@ for path in gifs:
         print(f"  {path.relative_to(root)}: {im.size[0]}x{im.size[1]}, {count} frames, {path.stat().st_size/1048576:.2f} MiB")
         assert count > 1, f"Non-animated GIF: {path}"
 
-expected = 13
+expected = 21
 assert len(gifs) == expected, f"Expected {expected} motion assets, got {len(gifs)}"
 assert not missing, f"{len(missing)} local images missing"
+assert (root / "assets/source/vassell-oc.png").is_file()
+assert "VASSELL" in text, "Primary Vassell identity is missing"
+assert "<table" not in text.lower(), "Plain HTML table remains"
+assert not any(line.strip().startswith("|") for line in text.splitlines()), "Plain Markdown table remains"
 assert 'https://github.com/vassellenha' in text
 assert 'https://www.linkedin.com/in/vassell-enha-atthayya-182661323/' in text
 assert '<script' not in text.lower()

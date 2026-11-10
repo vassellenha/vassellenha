@@ -89,7 +89,7 @@ def scratch(d, w, h, t, seed=4, count=44, color=WHITE):
 def labels(d, w, title, index, y=22):
     panel(d, 18, y, min(w - 36, 580), 46, WHITE, 11)
     d.text((42, y + 7), f"// {index:02d}  {title}", font=font(25, mono=True), fill=BLACK)
-    d.text((w - 245, y + 11), "CCELL / 2026", font=font(20, mono=True), fill=WHITE)
+    d.text((w - 255, y + 11), "VASSELL / 2026", font=font(20, mono=True), fill=WHITE)
 
 
 def type_layer(im, text, pos, size, fg=WHITE, shadow=BLACK, angle=0,
@@ -141,150 +141,113 @@ def gfx_base(w, h, t, variant):
     return im
 
 
-def draw_masked_figure(im, center, scale, t):
-    """Original fictional phantom-mask silhouette; no real person's likeness."""
-    w, h = im.size
-    layer = Image.new("RGBA", (700, 710), (0, 0, 0, 0))
-    d = ImageDraw.Draw(layer)
-    # Cropped fan and speed lines behind the body.
-    burst(d, 340, 355, 50, 350, 37, .04 + t * .015, (BLACK, RED, WHITE))
-    # Coat silhouette, polygonal lapels, arms, scarf.
-    poly(d, [(250, 340), (125, 410), (64, 635), (608, 680), (545, 435),
-             (438, 348), (405, 284)], BLACK, WHITE, 7)
-    poly(d, [(250, 355), (330, 563), (218, 633), (156, 429)], WHITE)
-    poly(d, [(434, 351), (358, 582), (510, 607), (536, 420)], WHITE)
-    poly(d, [(282, 340), (358, 560), (423, 343)], RED)
-    # High-collar black jacket details.
-    poly(d, [(168, 465), (272, 423), (326, 602), (206, 548)], BLACK)
-    poly(d, [(474, 425), (389, 602), (510, 558), (561, 493)], BLACK)
-    d.line((209, 520, 322, 615), fill=RED, width=11)
-    d.line((488, 512, 387, 621), fill=RED, width=11)
-    # Neck and face.
-    poly(d, [(270, 264), (446, 263), (430, 410), (350, 472), (267, 396)], WHITE, BLACK, 7)
-    poly(d, [(272, 267), (442, 271), (416, 378), (347, 417), (282, 358)], WHITE)
-    # Hair with very graphic jagged tufts.
-    poly(d, [(253, 295), (238, 189), (272, 231), (278, 143), (302, 187),
-             (346, 123), (358, 171), (417, 143), (408, 199), (472, 185),
-             (445, 301), (410, 277), (386, 218), (345, 253), (298, 248)], BLACK, WHITE, 6)
-    # Trademark-free angular phantom eye mask.
-    poly(d, [(276, 298), (329, 278), (350, 305), (378, 275), (434, 299),
-             (420, 353), (367, 344), (342, 349), (283, 344)], BLACK)
-    poly(d, [(287, 306), (330, 309), (340, 330), (301, 328)], WHITE)
-    poly(d, [(372, 306), (420, 307), (409, 331), (367, 326)], WHITE)
-    # Eyes pulse red only on a couple of frames.
-    if (int(t * 12) % 29) in (0, 1, 2):
-        d.ellipse((314, 313, 329, 324), fill=RED)
-        d.ellipse((383, 312, 397, 323), fill=RED)
-    d.line((332, 380, 383, 380), fill=BLACK, width=5)
-    # Shattered calling card held near collar.
-    poly(d, [(467, 352), (590, 320), (618, 421), (492, 447)], WHITE, BLACK, 6)
-    d.text((495, 361), "TAKE", fill=BLACK, font=font(24))
-    d.text((496, 390), "HEART", fill=RED, font=font(25))
-    # Enlarged illustration clipped deliberately at the bottom.
-    nw, nh = int(700 * scale), int(710 * scale)
-    layer = layer.resize((nw, nh), Image.Resampling.LANCZOS)
-    im.paste(layer, (int(center[0] - nw / 2), int(center[1] - nh / 2)), layer)
+_OC_CACHE = {}
 
 
-def draw_hero(t):
+def oc_frame(width, height, mode="wide"):
+    """Preserve the supplied original character art and facial details."""
+    key = (width, height, mode)
+    if key in _OC_CACHE:
+        return _OC_CACHE[key].copy()
+    source = Image.open(OUT / "source" / "vassell-oc.png").convert("RGB")
+    if mode == "portrait":
+        source = source.crop((515, 25, 1435, 940))
+    elif mode == "close":
+        source = source.crop((225, 0, 1510, 830))
+    sw, sh = source.size
+    scale = max(width / sw, height / sh)
+    sized = source.resize((math.ceil(sw * scale), math.ceil(sh * scale)),
+                          Image.Resampling.LANCZOS)
+    left = (sized.width - width) // 2
+    top = (sized.height - height) // 2
+    result = sized.crop((left, top, left + width, top + height))
+    _OC_CACHE[key] = result
+    return result.copy()
+
+
+def oc_panel(im, box, mode="portrait"):
+    x, y, w, h = box
+    fragment = oc_frame(w, h, mode)
+    mask = Image.new("L", (w, h), 0)
+    md = ImageDraw.Draw(mask)
+    poly(md, [(25, 0), (w, 0), (w - 27, h), (0, h), (0, 45)], 255)
+    im.paste(fragment, (x, y), mask)
+    d = ImageDraw.Draw(im)
+    d.line([(x + 25, y), (x + w, y), (x + w - 27, y + h),
+            (x, y + h), (x, y + 45), (x + 25, y)], fill=WHITE, width=8)
+
+
+def draw_hero_oc(t):
+    """Two-act main banner with the user's actual OC rather than a placeholder."""
     w, h = 1280, 620
-    im = gfx_base(w, h, t, "hero")
+    im = oc_frame(w, h, "wide")
     d = ImageDraw.Draw(im)
-    # Sweeping title billboard with animated stripes.
-    poly(d, [(18, 104), (770, 44), (711, 516), (20, 554)], BLACK, WHITE, 8)
-    poly(d, [(24, 123), (760, 63), (737, 147), (20, 212)], RED)
-    panel(d, 33, 35, 494, 51, WHITE, 9)
-    d.text((54, 44), "STEALING BUGS / SHIPPING DREAMS", font=font(24, mono=True), fill=BLACK)
-    d.text((86, 123), "THE PHANTOM", font=font(40), fill=WHITE)
-    # Multi-plane typographic motion.
-    bounce = 3 * math.sin(t * 3.0)
-    type_layer(im, "VASSELL", (32 + bounce, 182), 155, WHITE, RED, angle=3,
-               stroke=3, stroke_fill=BLACK, skew=-.07)
-    type_layer(im, "ENHA", (73 - bounce, 351), 121, WHITE, RED, angle=-3,
-               stroke=3, stroke_fill=BLACK, skew=-.07)
+    poly(d, [(23, 107), (658, 47), (638, 515), (15, 566)], BLACK, WHITE, 10)
+    poly(d, [(25, 121), (645, 65), (633, 176), (21, 235)], RED)
+    panel(d, 40, 22, 533, 58, WHITE, 12, BLACK, 4)
+    d.text((62, 37), "VASSELL // FULL-STACK DEVELOPER", font=font(22, mono=True), fill=BLACK)
+    d.text((72, 132), "DEVELOPER PROFILE", font=font(34), fill=WHITE)
+    shift = 5 * math.sin(t * 2.4)
+    type_layer(im, "VASSELL", (46 + shift, 219), 131, WHITE, RED,
+               angle=3, stroke=3, stroke_fill=BLACK, skew=-.05)
     d = ImageDraw.Draw(im)
-    panel(d, 61, 518, 684, 56, RED, 20, WHITE, 4)
-    d.text((90, 527), "FULL-STACK  /  UI-UX  /  GAME DEV", font=font(26, mono=True), fill=WHITE)
-    draw_masked_figure(im, (990, 365 + 3 * math.sin(t * 2.2)), .96, t)
-    d = ImageDraw.Draw(im)
-    poly(d, [(798, 493), (1260, 440), (1280, 492), (810, 554)], RED)
-    type_layer(im, "CCELL.exe", (828, 483), 42, BLACK, WHITE, angle=5)
-    d = ImageDraw.Draw(im)
-    d.rectangle((0, 596, w, h), fill=WHITE)
-    d.text((22, 597), "// WELCOME TO MY PALACE", font=font(18, mono=True), fill=BLACK)
-    d.text((830, 597), "SYSTEM 05 / MAXIMUM STYLE", font=font(18, mono=True), fill=BLACK)
-    # Analog glitch line flickers, rare frame flashes.
-    if int(t * 12) % 37 in (19, 20):
-        for yy in [176, 239, 433]:
-            d.rectangle((32, yy, 768, yy + 6), fill=RED if yy % 2 else WHITE)
-    # Glint restricted to the top edge so it never obscures the main lettering.
-    xx = (t / 6) * 1580 - 140
-    poly(d, [(xx, 0), (xx + 18, 0), (xx - 7, 98), (xx - 25, 98)], WHITE)
-    # Second act: a complete calling-card impact shot, pushed in with a diagonal
-    # comic-panel wipe, then withdrawn before the loop restarts.
-    if t >= 3.20:
-        enter = ease((t - 3.20) / .52)
-        leave = ease((5.95 - t) / .58)
-        reveal = clamp(min(enter, leave))
+    panel(d, 65, 413, 535, 76, RED, 18, WHITE, 5)
+    d.text((94, 429), "FULL-STACK / UI-UX", font=font(31, mono=True), fill=WHITE)
+    x = 37 + 5 * math.sin(t * 1.9)
+    panel(d, x, 500, 550, 52, WHITE, 14, BLACK, 3)
+    d.text((x + 25, 510), "DESIGN. DEVELOP. DEPLOY.", font=font(26, mono=True), fill=BLACK)
+    for j in range(7):
+        px = 11 + j * 73 + 10 * math.sin(t * 4 + j)
+        d.line((px, 583, px + 66, 569), fill=BLACK if j % 2 else WHITE, width=3)
+    if int(t * 20) % 41 in (10, 11):
+        d.rectangle((28, 305, 627, 313), fill=RED)
+        d.rectangle((35, 325, 521, 327), fill=WHITE)
+    d.rectangle((0, 591, w, h), fill=BLACK)
+    d.text((26, 595), "VASSELL ENHA ATTHAYYA", font=font(21, mono=True), fill=WHITE)
+    d.text((821, 595), "ADAPT // IMPROVE // OVERCOME", font=font(20, mono=True), fill=WHITE)
+    if t >= 3.05:
+        reveal = min(ease((t - 3.05) / .58), ease((5.95 - t) / .52))
         if reveal > .001:
-            scene = Image.new("RGB", (w, h), WHITE)
+            scene = oc_frame(w, h, "close")
             sd = ImageDraw.Draw(scene)
-            burst(sd, 651, 314, 29, 1100, 43, .15 + t * .15,
-                  (RED, BLACK, WHITE))
-            dot_field(sd, (25, 50, 1270, 585), step=28, radius=3,
-                      seed=9, color=BLACK, wobble=t * 2)
-            poly(sd, [(32, 76), (1082, 18), (1022, 520), (20, 589)], BLACK, WHITE, 12)
-            poly(sd, [(38, 91), (1043, 39), (1022, 175), (31, 233)], RED)
-            type_layer(scene, "I DON'T JUST", (52, 92), 78, WHITE, BLACK,
-                       angle=2, stroke=2)
-            type_layer(scene, "WRITE CODE.", (80, 203), 102, WHITE, RED,
-                       angle=-2, stroke=3)
-            type_layer(scene, "I STEAL", (122, 355), 89, RED, WHITE,
-                       angle=3, stroke=3)
+            poly(sd, [(10, 16), (630, 0), (563, 615), (0, 620)], BLACK, WHITE, 8)
+            poly(sd, [(14, 35), (638, 0), (600, 122), (9, 171)], RED)
+            type_layer(scene, "ADAPT", (56, 51), 113, WHITE, BLACK, angle=3, stroke=2)
+            type_layer(scene, "IMPROVE", (32, 203), 91, RED, WHITE, angle=-3, stroke=3)
+            type_layer(scene, "OVERCOME", (44, 342), 84, WHITE, RED, angle=3, stroke=2)
             sd = ImageDraw.Draw(scene)
-            panel(sd, 809, 428, 398, 84, WHITE, 20, BLACK, 6)
-            sd.text((845, 444), "THE IMPOSSIBLE.", font=font(39), fill=BLACK)
-            sd.rectangle((0, 590, w, h), fill=RED)
-            sd.text((32, 594), "CCELL / MISSION IN PROGRESS", font=font(22, mono=True), fill=WHITE)
-            # Slight shake only during the impact moment.
-            if 3.68 < t < 3.88:
+            panel(sd, 48, 504, 515, 65, WHITE, 14, BLACK, 4)
+            sd.text((77, 519), "VASSELL / PORTFOLIO", font=font(27, mono=True), fill=BLACK)
+            if 3.6 < t < 3.78:
                 scene = scene.transform((w, h), Image.Transform.AFFINE,
-                                        (1, 0, int(4 * math.sin(t * 95)), 0, 1,
-                                         int(3 * math.cos(t * 81))),
+                                        (1, 0, round(3 * math.sin(t * 96)), 0, 1, 0),
                                         Image.Resampling.NEAREST)
             mask = Image.new("L", (w, h), 0)
             md = ImageDraw.Draw(mask)
-            edge = -240 + reveal * 1800
-            poly(md, [(-300, 0), (edge, 0), (edge - 260, h), (-300, h)], 255)
+            edge = -400 + 1830 * clamp(reveal)
+            poly(md, [(-400, 0), (edge, 0), (edge - 270, h), (-400, h)], 255)
             im.paste(scene, (0, 0), mask)
     return im
 
 
-def draw_dossier(t):
+def draw_dossier_oc(t):
     w, h = 1200, 480
     im = gfx_base(w, h, t, "dossier")
     d = ImageDraw.Draw(im)
-    labels(d, w, "PERSONNEL DOSSIER", 1)
-    poly(d, [(17, 92), (844, 72), (795, 421), (33, 455)], BLACK, WHITE, 7)
-    panel(d, 62, 97, 650, 59, RED, 19)
-    d.text((82, 104), "V A S S E L L    E N H A    A T T H A Y Y A", font=font(27), fill=WHITE)
-    type_layer(im, "LEVEL UP", (66, 150), 104, WHITE, RED, angle=3, stroke=3)
+    labels(d, w, "PROFESSIONAL PROFILE", 1)
+    poly(d, [(24, 96), (790, 73), (748, 424), (32, 455)], BLACK, WHITE, 7)
+    panel(d, 56, 105, 650, 61, RED, 17)
+    d.text((76, 120), "VASSELL ENHA ATTHAYYA", font=font(33), fill=WHITE)
+    type_layer(im, "ABOUT ME", (63, 171), 100, WHITE, RED, angle=3, stroke=3)
     d = ImageDraw.Draw(im)
-    d.text((79, 310), "INFORMATION SYSTEMS  /  TELKOM UNIVERSITY", font=font(25, mono=True), fill=WHITE)
-    panel(d, 78, 354, 623, 59, WHITE, 17)
-    d.text((108, 367), "DESIGN  >  BUILD  >  TEST  >  SHIP", font=font(25, mono=True), fill=BLACK)
-    # Original RPG-like paper-cut ID silhouette.
-    d.ellipse((891, 102, 1189, 400), fill=BLACK, outline=WHITE, width=8)
-    burst(d, 1042, 250, 53, 200, 24, t * .06, (RED, BLACK, WHITE))
-    poly(d, [(961, 361), (994, 274), (1089, 274), (1121, 368)], BLACK, WHITE, 5)
-    d.ellipse((1000, 174, 1083, 286), fill=WHITE, outline=BLACK, width=6)
-    poly(d, [(989, 209), (1007, 162), (1050, 143), (1086, 185), (1093, 220),
-             (1055, 198), (1029, 225)], BLACK)
-    poly(d, [(1008, 238), (1037, 227), (1063, 237), (1075, 249), (1040, 260)], RED)
-    d.text((896, 412), "IDENTITY: CCELL / ACTIVE", font=font(18, mono=True), fill=WHITE)
-    # Red flashing 'classified' angled stamp.
-    if math.sin(t * 3.5) > -.4:
-        type_layer(im, "CONFIDENTIAL", (850, 62), 29, RED, BLACK, angle=-13, stroke=2)
+    d.text((83, 314), "INFORMATION SYSTEMS", font=font(27, mono=True), fill=WHITE)
+    d.text((83, 350), "TELKOM UNIVERSITY", font=font(27, mono=True), fill=WHITE)
+    panel(d, 82, 401, 594, 43, WHITE, 12)
+    d.text((104, 406), "DESIGN > DEVELOP > TEST > DEPLOY", font=font(22, mono=True), fill=BLACK)
+    oc_panel(im, (793, 80, 390, 359), "portrait")
+    d = ImageDraw.Draw(im)
+    panel(d, 811, 402, 326, 47, RED, 11, WHITE, 3)
+    d.text((840, 411), "IDENTITY / VASSELL", font=font(21, mono=True), fill=WHITE)
     return im
 
 
@@ -299,12 +262,12 @@ def draw_arsenal(t):
     w, h = 1200, 520
     im = gfx_base(w, h, t, "arsenal")
     d = ImageDraw.Draw(im)
-    labels(d, w, "PHANTOM ARSENAL", 2)
+    labels(d, w, "TECHNICAL SKILLS", 2)
     poly(d, [(45, 110), (797, 68), (725, 470), (60, 505)], BLACK, WHITE, 7)
-    type_layer(im, "SKILL", (61, 108), 113, WHITE, RED, angle=2)
-    type_layer(im, "CARDS", (89, 244), 105, RED, WHITE, angle=-3, stroke=3)
+    type_layer(im, "TECH", (61, 108), 113, WHITE, RED, angle=2)
+    type_layer(im, "STACK", (89, 244), 105, RED, WHITE, angle=-3, stroke=3)
     d = ImageDraw.Draw(im)
-    d.text((121, 392), "CHOOSE YOUR LOADOUT  //  NO AUTO-EQUIP", font=font(24, mono=True), fill=WHITE)
+    d.text((121, 392), "TOOLS / FRAMEWORKS / WORKFLOWS", font=font(24, mono=True), fill=WHITE)
     # Rotating glyph, orbit and moving target lines.
     cx, cy = 979, 286
     for j in range(4):
@@ -334,13 +297,13 @@ def draw_missions(t):
     im = gfx_base(w, h, t, "missions")
     d = ImageDraw.Draw(im)
     panel(d, 22, 19, 518, 42, WHITE, 13)
-    d.text((51, 25), "// 03  THE MISSION BOARD", font=font(23, mono=True), fill=BLACK)
+    d.text((51, 25), "// 03  SELECTED PROJECTS", font=font(23, mono=True), fill=BLACK)
     poly(d, [(23, 75), (784, 37), (759, 243), (24, 266)], BLACK, WHITE, 6)
-    type_layer(im, "SELECT", (52, 97), 106, WHITE, RED, angle=2, stroke=2)
+    type_layer(im, "PROJECTS", (52, 97), 106, WHITE, RED, angle=2, stroke=2)
     d = ImageDraw.Draw(im)
     panel(d, 868, 114, 270, 84, WHITE, 19, BLACK, 4)
-    d.text((892, 129), "06  MISSIONS", font=font(27), fill=BLACK)
-    d.text((892, 160), "OPEN FILES  >", font=font(21, mono=True), fill=RED)
+    d.text((892, 129), "06  PROJECTS", font=font(27), fill=BLACK)
+    d.text((892, 160), "VIEW DETAILS  >", font=font(21, mono=True), fill=RED)
     for i in range(5):
         x = 800 + i * 72
         y = 225 + math.sin(t * 4 + i) * 5
@@ -352,10 +315,10 @@ def draw_pulse(t):
     w, h = 1200, 400
     im = gfx_base(w, h, t, "pulse")
     d = ImageDraw.Draw(im)
-    labels(d, w, "OPERATION: CONTINUOUS BUILD", 4)
+    labels(d, w, "DEVELOPMENT ACTIVITY", 4)
     poly(d, [(42, 97), (576, 87), (530, 373), (51, 388)], BLACK, WHITE, 7)
-    type_layer(im, "NEVER", (68, 119), 101, WHITE, RED, angle=2)
-    type_layer(im, "STOP.", (80, 233), 93, RED, WHITE, angle=-3, stroke=3)
+    type_layer(im, "ONGOING", (58, 119), 80, WHITE, RED, angle=2)
+    type_layer(im, "PROGRESS", (72, 233), 72, RED, WHITE, angle=-3, stroke=3)
     d = ImageDraw.Draw(im)
     # Decorative activity cells deliberately do not claim real GitHub data.
     for i in range(17):
@@ -365,7 +328,7 @@ def draw_pulse(t):
             wave = math.sin(t * 2.1 - i * .27 - j * .44)
             fill = WHITE if (n + wave * 4) > 6 else BLACK if n < 2 else RED
             poly(d, [(x, y), (x + 26, y - 4), (x + 24, y + 20), (x, y + 25)], fill, BLACK, 2)
-    d.text((693, 366), "DECORATIVE GRID / SEE LIVE DATA BELOW", font=font(17, mono=True), fill=WHITE)
+    d.text((693, 366), "ACTIVITY ILLUSTRATION / VIEW ACTUAL DATA", font=font(16, mono=True), fill=WHITE)
     return im
 
 
@@ -373,17 +336,17 @@ def draw_contact(t):
     w, h = 1200, 360
     im = gfx_base(w, h, t, "dossier")
     d = ImageDraw.Draw(im)
-    labels(d, w, "SOCIAL LINK UNLOCKED", 5)
+    labels(d, w, "CONTACT & COLLABORATION", 5)
     poly(d, [(39, 109), (863, 76), (814, 337), (61, 348)], BLACK, WHITE, 7)
-    type_layer(im, "LET'S", (62, 111), 94, WHITE, RED, angle=2)
-    type_layer(im, "CONNECT!", (146, 202), 93, RED, WHITE, angle=-2, stroke=3)
+    type_layer(im, "GET IN", (62, 111), 94, WHITE, RED, angle=2)
+    type_layer(im, "TOUCH", (146, 202), 93, RED, WHITE, angle=-2, stroke=3)
     d = ImageDraw.Draw(im)
     # Envelopes that orbit a graphic dialogue bubble.
     cx, cy = 1032, 205
     d.ellipse((912, 93, 1149, 330), fill=WHITE, outline=BLACK, width=7)
     d.rectangle((961, 160, 1100, 240), fill=RED, outline=BLACK, width=7)
     d.line((968, 165, 1029, 211, 1098, 165), fill=BLACK, width=7)
-    d.text((985, 248), "PING ME", font=font(18, mono=True), fill=BLACK)
+    d.text((985, 248), "CONTACT", font=font(18, mono=True), fill=BLACK)
     for j in range(8):
         a = t * .6 + j * math.pi / 4
         x, y = cx + 115 * math.cos(a), cy + 115 * math.sin(a)
@@ -396,14 +359,14 @@ def draw_outro(t):
     im = gfx_base(w, h, t, "outro")
     d = ImageDraw.Draw(im)
     poly(d, [(35, 34), (966, 22), (916, 337), (28, 350)], BLACK, WHITE, 7)
-    type_layer(im, "STEAL THE", (66, 62), 107, WHITE, RED, angle=2)
-    type_layer(im, "SHOW.", (156, 188), 106, RED, WHITE, angle=-3, stroke=3)
+    type_layer(im, "BUILD WITH", (66, 62), 99, WHITE, RED, angle=2)
+    type_layer(im, "PURPOSE.", (156, 188), 106, RED, WHITE, angle=-3, stroke=3)
     d = ImageDraw.Draw(im)
     for i in range(6):
         y = 24 + i * 62 + 5 * math.sin(t * 3 + i)
         poly(d, [(1013, y), (1146, y - 27), (1195, y + 13), (1061, y + 42)], BLACK if i%2 else WHITE)
     panel(d, 881, 286, 280, 48, WHITE, 10, BLACK, 3)
-    d.text((912, 295), "TO BE CONTINUED...", font=font(20, mono=True), fill=BLACK)
+    d.text((912, 295), "THANK YOU FOR VISITING", font=font(17, mono=True), fill=BLACK)
     return im
 
 
@@ -413,7 +376,7 @@ PROJECTS = [
     ("03", "AMANIN", "AI ANTI-SCAM CONCEPT", ["AI", "PRODUCT", "SAFETY"], "AI-assisted anti-scam decision support", "AMANIN-Project"),
     ("04", "PHARVIA", "PHARMA TRACEABILITY", ["HEALTH", "PRODUCT", "TRACE"], "Pharmaceutical return and traceability", "PHARVIA-Project"),
     ("05", "VUE UI LAB", "INTERFACE EXPERIMENTS", ["VUE.JS", "ROUTING", "REST API"], "Components, state, routing and API integration", "PRAKTIKUM_UI-LANJUT_VASSELL-ENHA-ATTHAYYA_102042300140"),
-    ("06", "MORE MISSIONS", "THE FULL ARCHIVE", ["LARAVEL", "VUE", "LUA"], "Explore every other repository and experiment", "?tab=repositories"),
+    ("06", "MORE PROJECTS", "ALL REPOSITORIES", ["LARAVEL", "VUE", "LUA"], "Explore every other repository and experiment", "?tab=repositories"),
 ]
 
 
@@ -428,7 +391,7 @@ def project_card(idx, t=None):
     burst(d, 535, 132, 33, 204, 18, idx * .2, (RED, BLACK, WHITE))
     dot_field(d, (457, 37, 626, 254), 14, 2, idx, BLACK)
     panel(d, 18, 17, 290, 45, WHITE, 10)
-    d.text((35, 24), f"MISSION // {number}", font=font(22, mono=True), fill=BLACK)
+    d.text((35, 24), f"PROJECT // {number}", font=font(22, mono=True), fill=BLACK)
     if len(name) > 12:
         sz = 51
     elif len(name) > 9:
@@ -442,7 +405,7 @@ def project_card(idx, t=None):
     d.text((43, 192), subtitle, font=font(22, mono=True), fill=WHITE if idx % 2 == 0 else BLACK)
     panel(d, 32, 232, 545, 46, BLACK if idx % 2 == 0 else RED, 11, WHITE, 3)
     d.text((49, 242), "  /  ".join(tags), font=font(18, mono=True), fill=WHITE)
-    d.text((43, 289), "OPEN DOSSIER  >", font=font(19, mono=True), fill=WHITE if idx%2==0 else BLACK)
+    d.text((43, 289), "VIEW REPOSITORY  >", font=font(19, mono=True), fill=WHITE if idx%2==0 else BLACK)
     if t is not None:
         # A different moving scanner and graphic heartbeat in every dossier.
         sweep_x = 560 - (t / 3.5) * 590
@@ -467,14 +430,120 @@ def nav_card(index, label):
     return im
 
 
+def draw_identity_board(t):
+    """Three custom game-status cards replace the previous Markdown table."""
+    w, h = 1200, 345
+    im = Image.new("RGB", (w, h), BLACK)
+    d = ImageDraw.Draw(im)
+    dot_field(d, (0, 0, w, h), 24, 2.5, color=RED, wobble=t)
+    items = [
+        ("01 / PROFILE", ["VASSELL", "ENHA ATTHAYYA", "FULL-STACK DEVELOPER"], WHITE, BLACK),
+        ("02 / EDUCATION", ["TELKOM", "INFORMATION SYSTEMS", "UI/UX + PRODUCT"], RED, WHITE),
+        ("03 / INTERESTS", ["ROBLOX / LUA", "DOCKER + CLOUD", "CONTINUOUS LEARNING"], WHITE, BLACK),
+    ]
+    for i, (label, lines, bg, fg) in enumerate(items):
+        x = 17 + i * 398
+        top = 26 + 6 * math.sin(t * 2 + i)
+        poly(d, [(x + 22, top), (x + 390, top - 9), (x + 364, top + 292),
+                 (x, top + 315)], bg, BLACK if i != 1 else WHITE, 5)
+        panel(d, x + 24, top + 26, 330, 47, BLACK, 9)
+        d.text((x + 42, top + 35), label, font=font(20, mono=True), fill=WHITE)
+        d.text((x + 30, top + 110), lines[0], font=font(47 if len(lines[0]) < 10 else 32), fill=fg)
+        d.line((x + 29, top + 178, x + 328, top + 163), fill=fg, width=6)
+        d.text((x + 30, top + 200), lines[1], font=font(22, mono=True), fill=fg)
+        d.text((x + 30, top + 243), lines[2], font=font(20, mono=True), fill=fg)
+    return im
+
+
+def draw_skill_board(t):
+    """A dense, carefully readable arsenal interface without HTML tables."""
+    w, h = 1200, 440
+    im = Image.new("RGB", (w, h), BLACK)
+    d = ImageDraw.Draw(im)
+    burst(d, 593, 224, 70, 720, 28, t * .017, (RED, BLACK, WHITE))
+    cards = [
+        ("FRONTEND", ["HTML / CSS", "JAVASCRIPT / TYPESCRIPT", "REACT / VUE", "TAILWIND CSS / FIGMA"], WHITE, BLACK),
+        ("BACKEND", ["PHP / LARAVEL", "NODE.JS / MYSQL", "PYTHON / REST API", "ROLE-BASED ACCESS"], RED, WHITE),
+        ("WORKBENCH", ["GIT / GITHUB", "POSTMAN / VS CODE", "DOCKER / CLOUD", "LUA / ROBLOX STUDIO"], BLACK, WHITE),
+    ]
+    for i, (title, rows, bg, fg) in enumerate(cards):
+        x = 10 + i * 396
+        y = 12 + round(4 * math.sin(t * 3 + i))
+        poly(d, [(x + 24, y), (x + 385, y + 4), (x + 359, y + 408),
+                 (x, y + 430)], bg, WHITE if bg == BLACK else BLACK, 5)
+        panel(d, x + 24, y + 19, 338, 66, RED if bg != RED else BLACK, 11)
+        d.text((x + 44, y + 33), f"0{i+1}  {title}", font=font(30), fill=WHITE)
+        for j, row in enumerate(rows):
+            yy = y + 124 + j * 65
+            d.text((x + 38, yy), row, font=font(22 if len(row) < 20 else 20, mono=True), fill=fg)
+            d.line((x + 36, yy + 38, x + 316, yy + 27), fill=fg, width=2)
+        marker = x + 42 + 240 * ((t * .37 + i * .17) % 1)
+        d.ellipse((marker - 8, y + 393, marker + 8, y + 409), fill=RED if bg != RED else WHITE)
+    return im
+
+
+def draw_bio_manifesto(t):
+    w, h = 1200, 275
+    im = gfx_base(w, h, t, "dossier")
+    d = ImageDraw.Draw(im)
+    poly(d, [(28, 16), (842, 4), (795, 253), (20, 268)], BLACK, WHITE, 7)
+    panel(d, 50, 29, 624, 45, RED, 10)
+    d.text((68, 39), "//  VASSELL / PROFESSIONAL OVERVIEW", font=font(22, mono=True), fill=WHITE)
+    d.text((67, 101), "FROM CONCEPT", font=font(62), fill=WHITE)
+    d.text((68, 170), "TO IMPLEMENTATION.", font=font(45), fill=RED)
+    d.text((74, 231), "DESIGN  >  DEVELOPMENT  >  DEPLOYMENT", font=font(19, mono=True), fill=WHITE)
+    oc_panel(im, (839, 18, 350, 250), "portrait")
+    return im
+
+
+def draw_status_link(t):
+    w, h = 1200, 176
+    im = Image.new("RGB", (w, h), RED)
+    d = ImageDraw.Draw(im)
+    burst(d, 1040, 90, 30, 410, 21, t * .05, (BLACK, RED, WHITE))
+    poly(d, [(16, 24), (1112, 0), (1071, 153), (10, 171)], BLACK, WHITE, 7)
+    type_layer(im, "GITHUB DEVELOPMENT ACTIVITY", (38, 36), 52, WHITE, RED, angle=1)
+    d = ImageDraw.Draw(im)
+    d.text((72, 125), "VIEW CONTRIBUTIONS AND REPOSITORIES >", font=font(22, mono=True), fill=WHITE)
+    return im
+
+
+LINKS = [
+    ("01", "GITHUB", "@vassellenha"),
+    ("02", "LINKEDIN", "VASSELL ENHA ATTHAYYA"),
+    ("03", "INSTAGRAM", "@vassellenha"),
+    ("04", "PORTFOLIO", "EXPLORE THE WORK"),
+]
+
+
+def draw_link_card(i, t):
+    n, label, secondary = LINKS[i]
+    w, h = 560, 154
+    im = Image.new("RGB", (w, h), WHITE if i % 2 else RED)
+    d = ImageDraw.Draw(im)
+    poly(d, [(0, 5), (552, 0), (536, 148), (6, 153)], BLACK, WHITE, 5)
+    panel(d, 23, 17, 98, 42, WHITE, 8)
+    d.text((40, 26), f"//{n}", font=font(20, mono=True), fill=BLACK)
+    d.text((142, 13), label, font=font(51 if len(label) < 9 else 44), fill=WHITE)
+    d.text((39, 103), secondary, font=font(19, mono=True), fill=WHITE)
+    x = 510 - 20 * ((t * 2) % 1)
+    poly(d, [(x - 36, 101), (x + 4, 101), (x + 16, 114),
+             (x + 4, 128), (x - 36, 128)], RED, WHITE, 3)
+    return im
+
+
 ANIMATIONS = [
-    ("01-phantom-hero", draw_hero, 6.0),
-    ("02-personnel-dossier", draw_dossier, 6.0),
+    ("01-phantom-hero", draw_hero_oc, 6.0),
+    ("02-personnel-dossier", draw_dossier_oc, 6.0),
+    ("02b-identity-board", draw_identity_board, 5.0),
+    ("02c-bio-manifesto", draw_bio_manifesto, 5.0),
     ("03-phantom-arsenal", draw_arsenal, 6.0),
+    ("03b-skill-board", draw_skill_board, 5.0),
     ("04-mission-select", draw_missions, 5.0),
     ("05-operation-pulse", draw_pulse, 6.0),
+    ("05b-status-link", draw_status_link, 5.0),
     ("06-social-link", draw_contact, 5.0),
-    ("07-steal-the-show", draw_outro, 6.0),
+    ("07-professional-finale", draw_outro, 6.0),
 ]
 
 
@@ -497,17 +566,18 @@ def main():
     p.add_argument("--fps", type=int, default=20)
     p.add_argument("--only", help="partial animation name or 'static'")
     p.add_argument("--preview-only", action="store_true", help="save first frames, skip GIF")
-    p.add_argument("--cards", action="store_true", help="render 6 animated mission dossiers")
+    p.add_argument("--cards", action="store_true", help="render 6 animated project cards")
     args = p.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "motion").mkdir(exist_ok=True)
     (OUT / "posters").mkdir(exist_ok=True)
     (OUT / "navigation").mkdir(exist_ok=True)
+    (OUT / "links").mkdir(exist_ok=True)
 
     if args.only is None or args.only == "static":
         for i in range(6):
             project_card(i).save(OUT / "posters" / f"mission-{i+1:02d}.png", optimize=True)
-        for i, name in enumerate(("ABOUT", "ARSENAL", "MISSIONS", "STATUS", "CONTACT"), 1):
+        for i, name in enumerate(("ABOUT", "SKILLS", "PROJECTS", "ACTIVITY", "CONTACT"), 1):
             nav_card(i, name).save(OUT / "navigation" / f"nav-{i:02d}.png", optimize=True)
         print("Rendered 6 mission cards and 5 navigation cards", flush=True)
         if args.only == "static":
@@ -520,6 +590,14 @@ def main():
                 frames = Path(td)
                 for k in range(int(3.5 * args.fps)):
                     project_card(i, k / args.fps).save(frames / f"{k:04d}.png")
+                encode_gif(frames, dest, args.fps)
+            print(f"Animated {dest.relative_to(ROOT)} ({dest.stat().st_size/1048576:.1f} MiB)", flush=True)
+        for i in range(4):
+            dest = OUT / "links" / f"contact-{i+1:02d}.gif"
+            with tempfile.TemporaryDirectory(prefix="phantom-link-") as td:
+                frames = Path(td)
+                for k in range(int(3 * args.fps)):
+                    draw_link_card(i, k / args.fps).save(frames / f"{k:04d}.png")
                 encode_gif(frames, dest, args.fps)
             print(f"Animated {dest.relative_to(ROOT)} ({dest.stat().st_size/1048576:.1f} MiB)", flush=True)
     for name, renderer, seconds in ANIMATIONS:

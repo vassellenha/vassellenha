@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#de1024" />
-  <title>CCELL.exe — The Phantom Developer</title>
+  <title>VASSELL — The Phantom Developer</title>
   <style>
     :root { --red: #de1024; --ink: #0a090c; --paper: #faf7ec; }
     * { box-sizing: border-box; }
@@ -21,7 +21,7 @@
     nav a { color:var(--ink); background:var(--paper); padding:8px 11px; font:900 12px/1 monospace; text-decoration:none; transform:skew(-11deg); transition:background .2s, color .2s, translate .2s; }
     nav a:hover { background:var(--red); color:var(--paper); translate:0 -4px; }
     .hero { padding:24px 0 8px; position:relative; }
-    .hero::after { content:'AN UNREASONABLE AMOUNT OF STYLE'; position:absolute; right:12px; bottom:36px; font:bold 10px monospace; color:#fffa; letter-spacing:2px; transform:rotate(-4deg); }
+    .hero::after { content:'VASSELL / PROFESSIONAL PORTFOLIO'; position:absolute; right:12px; bottom:36px; font:bold 10px monospace; color:#fffa; letter-spacing:2px; transform:rotate(-4deg); }
     img { max-width:100%; display:block; }
     .hero img, .shot img { width:100%; height:auto; }
     .shot { position:relative; margin:55px 0 16px; filter:drop-shadow(15px 15px 0 #de1024); }
@@ -39,7 +39,7 @@
     .projects { display:grid; grid-template-columns:1fr 1fr; gap:23px; margin:26px 0; }
     .project { display:block; position:relative; color:var(--paper); text-decoration:none; overflow:hidden; border:4px solid var(--paper); box-shadow:8px 8px var(--red); transition:transform .24s, filter .24s, box-shadow .24s; }
     .project:hover { transform:translate(-3px,-10px) rotate(-1deg); filter:contrast(1.14); box-shadow:13px 15px var(--red); }
-    .project::after { content:'OPEN FILE >'; position:absolute; right:0; bottom:0; background:var(--ink); color:var(--paper); padding:4px 13px; font:bold 13px monospace; }
+    .project::after { content:'VIEW PROJECT >'; position:absolute; right:0; bottom:0; background:var(--ink); color:var(--paper); padding:4px 13px; font:bold 13px monospace; }
     .ribbon { background:var(--red); color:var(--paper); margin-top:24px; padding:8px 15px; font:900 18px monospace; transform:rotate(-1deg); }
     .links { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:28px 0 50px; }
     .links a { background:var(--red); color:var(--paper); text-decoration:none; padding:17px 25px; font:900 clamp(15px,2vw,25px) Impact,sans-serif; transform:skew(-7deg); border:3px solid var(--paper); box-shadow:6px 6px var(--paper); transition:translate .15s,background .15s; }
@@ -58,37 +58,30 @@
 <body>
   <div id="cursor" aria-hidden="true"></div>
   <header>
-    <strong>CCELL<span>.exe</span> // PHANTOM DEVELOPER</strong>
+    <strong>VASSELL<span> / </span> DEVELOPER PORTFOLIO</strong>
     <nav aria-label="Menu">
-      <a href="#about">01 ABOUT</a><a href="#arsenal">02 ARSENAL</a>
-      <a href="#missions">03 MISSIONS</a><a href="#status">04 STATUS</a>
+      <a href="#about">01 ABOUT</a><a href="#arsenal">02 SKILLS</a>
+      <a href="#missions">03 PROJECTS</a><a href="#status">04 ACTIVITY</a>
       <a href="#contact">05 CONTACT</a>
     </nav>
   </header>
   <main class="page">
-    <section class="hero"><img src="../assets/motion/01-phantom-hero.gif" alt="CCELL.exe cinematic animated cover" /></section>
-    <div class="ribbon">PRESS START // THIS IS THE UNRESTRICTED PREVIEW, NOT THE GITHUB RENDERER</div>
+    <section class="hero"><img src="../assets/motion/01-phantom-hero.gif" alt="Vassell's OC cinematic animated cover" /></section>
+    <div class="ribbon">PORTFOLIO PREVIEW // GITHUB-COMPATIBLE VISUAL ASSETS</div>
 
     <section id="about" class="reveal">
-      <div class="shot" data-arc="ARC 01 / ORIGIN FILE"><img src="../assets/motion/02-personnel-dossier.gif" alt="Personnel dossier animation" loading="lazy" /></div>
-      <div class="copy"><span class="kicker">IDENTITY VERIFIED // CCELL</span>
-        <h2>Meet the operative.</h2>
-        <p>Vassell Enha Atthayya is an Information Systems student at Telkom University, exploring full-stack web engineering, UI/UX, and the satisfaction of taking an idea all the way from database to deployment.</p>
-        <p>Design the experience. Build the system. Ship the thing.</p>
-      </div>
+      <div class="shot" data-arc="SECTION 01 / PROFILE"><img src="../assets/motion/02-personnel-dossier.gif" alt="Professional profile animation" loading="lazy" /></div>
+      <img src="../assets/motion/02c-bio-manifesto.gif" alt="Vassell's illustrated personal manifesto" loading="lazy" />
+      <img src="../assets/motion/02b-identity-board.gif" alt="Identity, university, interests and learning missions in custom designed cards" loading="lazy" />
     </section>
 
     <section id="arsenal" class="reveal">
-      <div class="shot" data-arc="ARC 02 / EQUIPMENT"><img src="../assets/motion/03-phantom-arsenal.gif" alt="Phantom Arsenal animation" loading="lazy" /></div>
-      <div class="trio">
-        <div class="tile"><h3>FRONTEND</h3><p>HTML / CSS / JS / TS / React / Vue / Tailwind / Figma</p></div>
-        <div class="tile"><h3>BACKEND</h3><p>PHP / Laravel / Node.js / MySQL / Python / REST APIs</p></div>
-        <div class="tile"><h3>EXPERIMENTS</h3><p>Git / GitHub / Postman / Docker / Cloud / Lua / Roblox</p></div>
-      </div>
+      <div class="shot" data-arc="SECTION 02 / SKILLS"><img src="../assets/motion/03-phantom-arsenal.gif" alt="Technical skills animation" loading="lazy" /></div>
+      <img src="../assets/motion/03b-skill-board.gif" alt="Three fully illustrated tech stack cards" loading="lazy" />
     </section>
 
     <section id="missions" class="reveal">
-      <div class="shot" data-arc="ARC 03 / CONTRACTS"><img src="../assets/motion/04-mission-select.gif" alt="Mission selection animation" loading="lazy" /></div>
+      <div class="shot" data-arc="SECTION 03 / PROJECTS"><img src="../assets/motion/04-mission-select.gif" alt="Selected projects animation" loading="lazy" /></div>
       <div class="projects">
         <a class="project" href="https://github.com/vassellenha/KWU-BRREAD"><img src="../assets/posters/mission-01.gif" alt="BRREAD mission" loading="lazy" /></a>
         <a class="project" href="https://github.com/vassellenha/CatchAndClash_Roblox_Project"><img src="../assets/posters/mission-02.gif" alt="Catch and Clash mission" loading="lazy" /></a>
@@ -100,22 +93,22 @@
     </section>
 
     <section id="status" class="reveal">
-      <div class="shot" data-arc="ARC 04 / NEVER STOP"><img src="../assets/motion/05-operation-pulse.gif" alt="Decorative development pulse animation" loading="lazy" /></div>
-      <div class="status"><span>DESIGN → BUILD → TEST → SHIP</span><a href="https://github.com/vassellenha?tab=overview">SEE REAL GITHUB ACTIVITY ↗</a></div>
+      <div class="shot" data-arc="SECTION 04 / ACTIVITY"><img src="../assets/motion/05-operation-pulse.gif" alt="Decorative development activity animation" loading="lazy" /></div>
+      <a href="https://github.com/vassellenha?tab=overview"><img src="../assets/motion/05b-status-link.gif" alt="View real GitHub activity" loading="lazy" /></a>
     </section>
 
     <section id="contact" class="reveal">
-      <div class="shot" data-arc="ARC 05 / SOCIAL LINK"><img src="../assets/motion/06-social-link.gif" alt="Social link animation" loading="lazy" /></div>
-      <div class="links">
-        <a href="https://github.com/vassellenha">GITHUB</a>
-        <a href="https://www.linkedin.com/in/vassell-enha-atthayya-182661323/">LINKEDIN</a>
-        <a href="https://instagram.com/vassellenha">INSTAGRAM</a>
-        <a href="https://websiteportofoliokelompok5.vercel.app/">PORTFOLIO</a>
+      <div class="shot" data-arc="SECTION 05 / CONTACT"><img src="../assets/motion/06-social-link.gif" alt="Contact and collaboration animation" loading="lazy" /></div>
+      <div class="projects">
+        <a class="project" href="https://github.com/vassellenha"><img src="../assets/links/contact-01.gif" alt="GitHub" loading="lazy" /></a>
+        <a class="project" href="https://www.linkedin.com/in/vassell-enha-atthayya-182661323/"><img src="../assets/links/contact-02.gif" alt="LinkedIn" loading="lazy" /></a>
+        <a class="project" href="https://instagram.com/vassellenha"><img src="../assets/links/contact-03.gif" alt="Instagram" loading="lazy" /></a>
+        <a class="project" href="https://websiteportofoliokelompok5.vercel.app/"><img src="../assets/links/contact-04.gif" alt="Portfolio" loading="lazy" /></a>
       </div>
-      <img src="../assets/motion/07-steal-the-show.gif" alt="Steal the show finale" loading="lazy" />
+      <img src="../assets/motion/07-professional-finale.gif" alt="Build with Purpose closing animation" loading="lazy" />
     </section>
   </main>
-  <footer>CCELL.exe / PERSONA-INSPIRED ORIGINAL ART & MOTION // 2026<br/>A FAN-INSPIRED DESIGN CONCEPT, NOT AN OFFICIAL ATLUS PRODUCT.</footer>
+  <footer>VASSELL / PERSONA-INSPIRED MOTION DESIGN // 2026<br/>A FAN-INSPIRED DESIGN CONCEPT, NOT AN OFFICIAL ATLUS PRODUCT.</footer>
   <script>
     const cursor = document.querySelector('#cursor');
     addEventListener('pointermove', e => {

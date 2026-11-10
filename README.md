@@ -1,134 +1,67 @@
-<!--
-  CCELL.exe: THE PHANTOM DEVELOPER / PERSONA-INSPIRED EDITION
-  Visual identity & motion assets are original, created for vassellenha.
-  GIF is used intentionally: GitHub strips README JavaScript and sanitizes inline CSS.
-  All profile content and outbound URLs can be edited directly in this file.
--->
-
+<!-- VASSELL / THE PHANTOM DEVELOPER — Persona-inspired, all-graphic GitHub profile. -->
+<!-- User-supplied OC illustration. All animations are pre-rendered GitHub-compatible GIFs. -->
 <a id="top"></a>
-
 <div align="center">
 
-<a href="https://github.com/vassellenha"><img src="./assets/motion/01-phantom-hero.gif" width="100%" alt="Animated comic-book cover: Vassell Enha, the Phantom Developer, original masked figure, red-black-white kinetic graphics" /></a>
-
-<sub>NOW ENTERING THE PALACE OF <strong>VASSELL ENHA ATTHAYYA</strong> · ALSO KNOWN AS <strong>CCELL</strong></sub>
-
-<br /><br />
+<a href="https://github.com/vassellenha"><img src="./assets/motion/01-phantom-hero.gif" width="100%" alt="Vassell Enha Atthayya, the Phantom Developer. Cinematic animated banner featuring Vassell's original masked-character illustration and ADAPT / IMPROVE / OVERCOME second act." /></a>
 
 <a href="#about"><img src="./assets/navigation/nav-01.png" width="19%" alt="01 About" /></a>
 <a href="#arsenal"><img src="./assets/navigation/nav-02.png" width="19%" alt="02 Arsenal" /></a>
-<a href="#missions"><img src="./assets/navigation/nav-03.png" width="19%" alt="03 Missions" /></a>
-<a href="#status"><img src="./assets/navigation/nav-04.png" width="19%" alt="04 Status" /></a>
+<a href="#missions"><img src="./assets/navigation/nav-03.png" width="19%" alt="03 Projects" /></a>
+<a href="#status"><img src="./assets/navigation/nav-04.png" width="19%" alt="04 Activity" /></a>
 <a href="#contact"><img src="./assets/navigation/nav-05.png" width="19%" alt="05 Contact" /></a>
 
 </div>
 
-<!-- REAL PROFILE DATA / NO FABRICATED GAME METRICS -->
 <a id="about"></a>
 
-<img src="./assets/motion/02-personnel-dossier.gif" width="100%" alt="Animated personnel dossier for Vassell Enha Atthayya, Information Systems student at Telkom University" />
+<img src="./assets/motion/02-personnel-dossier.gif" width="100%" alt="Animated professional profile featuring Vassell's own OC art, Vassell Enha Atthayya, Information Systems at Telkom University and full-stack / UI-UX interests." />
 
-<blockquote>
-  <strong>THE PERSON BEHIND THE MASK.</strong><br />
-  I'm <strong>Vassell Enha Atthayya</strong>, or <strong>ccell</strong>—an Information Systems student at <strong>Telkom University</strong> who builds full-stack web applications, designs interfaces, and explores the systems that make ideas become real products. I like understanding the whole journey, from the database to the deployment.
-</blockquote>
+<img src="./assets/motion/02c-bio-manifesto.gif" width="100%" alt="Vassell's manifesto: turning ideas into real products, from database through design to deployment." />
 
-<div align="center">
-
-| IDENTITY | CURRENT ARC | SIDE QUESTS |
-|:--|:--|:--|
-| `CCELL.exe` | `Full-Stack / UI-UX` | `Roblox / Lua Game Dev` |
-| `Vassell Enha Atthayya` | `Telkom University` | `Docker / Cloud Exploration` |
-
-</div>
-
-**Character notes:** I enjoy collaborative builds, learning new tools, and shaping useful products. My journey also includes national-level recognition in 2026 business-model-canvas and business-proposal competitions, as documented in the previous profile.
-
-> **MISSION STATEMENT:** DESIGN THE EXPERIENCE. BUILD THE SYSTEM. SHIP THE THING.
+<img src="./assets/motion/02b-identity-board.gif" width="100%" alt="Custom illustrated three-part status screen: Vassell Enha Atthayya, full-stack builder; Information Systems at Telkom University with UI/UX and product interests; Roblox/Lua side projects plus ongoing Docker and cloud learning." />
 
 <a id="arsenal"></a>
 
-<img src="./assets/motion/03-phantom-arsenal.gif" width="100%" alt="Animated Phantom Arsenal skill selection screen with rotating glyph and cycling categories" />
+<img src="./assets/motion/03-phantom-arsenal.gif" width="100%" alt="Animated technical skills overview, with technologies, frameworks and development workflows." />
 
-<div align="center">
-
-| `01 / FRONTEND` | `02 / BACKEND` | `03 / WORKBENCH + EXPERIMENTS` |
-|:--|:--|:--|
-| HTML · CSS · JavaScript · TypeScript | PHP · Laravel · Node.js | Git · GitHub · Postman |
-| React · Vue · Tailwind CSS | MySQL · Python · REST APIs | VS Code · Figma |
-| Interface architecture · UI/UX | Role-based access patterns | Docker · Cloud · Lua · Roblox Studio |
-
-</div>
-
-<sub>NOTE: Docker, cloud tooling, and Roblox/Lua are part of my ongoing learning and experimentation—not a claim of expert proficiency in everything listed.</sub>
+<img src="./assets/motion/03b-skill-board.gif" width="100%" alt="Designed technical skills cards. Frontend: HTML, CSS, JavaScript, TypeScript, React, Vue, Tailwind CSS, Figma. Backend: PHP, Laravel, Node.js, MySQL, Python, REST APIs and role-based access. Workbench and learning: Git, GitHub, Postman, VS Code, Docker, cloud, Lua, Roblox Studio." />
 
 <a id="missions"></a>
 
-<img src="./assets/motion/04-mission-select.gif" width="100%" alt="Animated Persona-inspired mission-selection screen with red-and-black comic bursts" />
+<img src="./assets/motion/04-mission-select.gif" width="100%" alt="Animated selected-projects overview with links to individual repositories below." />
 
 <div align="center">
 
-<strong>THE MISSION BOARD // OPEN A DOSSIER TO VIEW THE REAL REPOSITORY</strong>
+<a href="https://github.com/vassellenha/KWU-BRREAD"><img src="./assets/posters/mission-01.gif" width="49%" alt="BRREAD! Laravel, PHP and MySQL entrepreneurship app with storefront, roles and inventory workflows. Click for repository." /></a>
+<a href="https://github.com/vassellenha/CatchAndClash_Roblox_Project"><img src="./assets/posters/mission-02.gif" width="49%" alt="Catch and Clash, Roblox Studio and Lua gameplay project. Click for repository." /></a>
 
-<br /><br />
+<a href="https://github.com/vassellenha/AMANIN-Project"><img src="./assets/posters/mission-03.gif" width="49%" alt="AMANIN AI-assisted anti-scam decision-support concept. Click for repository." /></a>
+<a href="https://github.com/vassellenha/PHARVIA-Project"><img src="./assets/posters/mission-04.gif" width="49%" alt="PHARVIA pharmaceutical return and traceability business concept. Click for repository." /></a>
 
-<a href="https://github.com/vassellenha/KWU-BRREAD"><img src="./assets/posters/mission-01.gif" width="49%" alt="BRREAD! — Laravel, PHP, MySQL entrepreneurship web app" /></a>
-<a href="https://github.com/vassellenha/CatchAndClash_Roblox_Project"><img src="./assets/posters/mission-02.gif" width="49%" alt="Catch and Clash — Roblox Studio and Lua game project" /></a>
-
-<a href="https://github.com/vassellenha/AMANIN-Project"><img src="./assets/posters/mission-03.gif" width="49%" alt="AMANIN — AI-assisted anti-scam decision support concept" /></a>
-<a href="https://github.com/vassellenha/PHARVIA-Project"><img src="./assets/posters/mission-04.gif" width="49%" alt="PHARVIA — pharmaceutical return and traceability product concept" /></a>
-
-<a href="https://github.com/vassellenha/PRAKTIKUM_UI-LANJUT_VASSELL-ENHA-ATTHAYYA_102042300140"><img src="./assets/posters/mission-05.gif" width="49%" alt="Vue UI Lab — component design, state, routing, REST integration" /></a>
-<a href="https://github.com/vassellenha?tab=repositories"><img src="./assets/posters/mission-06.gif" width="49%" alt="More missions — browse all repositories" /></a>
+<a href="https://github.com/vassellenha/PRAKTIKUM_UI-LANJUT_VASSELL-ENHA-ATTHAYYA_102042300140"><img src="./assets/posters/mission-05.gif" width="49%" alt="Vue UI Lab components, state, routing and REST API integrations. Click for repository." /></a>
+<a href="https://github.com/vassellenha?tab=repositories"><img src="./assets/posters/mission-06.gif" width="49%" alt="Browse all repositories and other projects." /></a>
 
 </div>
-
-<details>
-<summary><strong>MISSION FILES / READ THE BRIEFINGS</strong></summary>
-
-| MISSION | ORIGINAL BRIEF | FILE |
-|:--|:--|:--|
-| `01 / BRREAD!` | Laravel-based entrepreneurship storefront, staff roles and inventory workflows. | [Open repository](https://github.com/vassellenha/KWU-BRREAD) |
-| `02 / Catch & Clash` | Roblox game project exploring Lua gameplay systems and player experiences. | [Open repository](https://github.com/vassellenha/CatchAndClash_Roblox_Project) |
-| `03 / AMANIN` | AI-assisted anti-scam decision-assistance concept. | [Open repository](https://github.com/vassellenha/AMANIN-Project) |
-| `04 / PHARVIA` | Pharmaceutical return and traceability business concept. | [Open repository](https://github.com/vassellenha/PHARVIA-Project) |
-| `05 / Vue UI Lab` | Vue components, state management, routing and REST API integration. | [Open repository](https://github.com/vassellenha/PRAKTIKUM_UI-LANJUT_VASSELL-ENHA-ATTHAYYA_102042300140) |
-
-</details>
 
 <a id="status"></a>
 
-<img src="./assets/motion/05-operation-pulse.gif" width="100%" alt="Animated Never Stop graphic with moving decorative contribution-style grid; not live GitHub statistics" />
+<img src="./assets/motion/05-operation-pulse.gif" width="100%" alt="Decorative animated development activity grid. Does not represent factual GitHub contribution counts." />
 
-<div align="center">
-
-<a href="https://github.com/vassellenha?tab=overview"><img src="https://streak-stats.demolab.com?user=vassellenha&theme=dark&hide_border=true&background=080808&ring=DE1024&fire=FA222F&currStreakLabel=FFFFFF&currStreakNum=FFFFFF&sideNums=FFFFFF&sideLabels=FFFFFF&dates=C9C9C9" width="72%" alt="Live GitHub contribution streak for vassellenha provided by GitHub Streak Stats" /></a>
-
-<br />
-
-<sub>Live streak card is supplied by an external service. The animated grid above is original decorative artwork, not a representation of real contribution counts.</sub>
-
-</div>
+<a href="https://github.com/vassellenha?tab=overview"><img src="./assets/motion/05b-status-link.gif" width="100%" alt="Open real live GitHub activity and contributions." /></a>
 
 <a id="contact"></a>
 
-<img src="./assets/motion/06-social-link.gif" width="100%" alt="Animated Social Link Unlocked contact screen with rotating markers and a red comic-style envelope" />
+<img src="./assets/motion/06-social-link.gif" width="100%" alt="Animated contact and collaboration section for software development, UI design and project inquiries." />
 
 <div align="center">
 
-**GOT A PROJECT? AN INTERFACE? A COMPLETELY UNREASONABLE IDEA?**
+<a href="https://github.com/vassellenha"><img src="./assets/links/contact-01.gif" width="49%" alt="GitHub @vassellenha" /></a>
+<a href="https://www.linkedin.com/in/vassell-enha-atthayya-182661323/"><img src="./assets/links/contact-02.gif" width="49%" alt="LinkedIn Vassell Enha Atthayya" /></a>
 
-[**GITHUB // @vassellenha**](https://github.com/vassellenha) &nbsp;·&nbsp; [**LINKEDIN // VASSELL ENHA ATTHAYYA**](https://www.linkedin.com/in/vassell-enha-atthayya-182661323/)  
-[**INSTAGRAM // @vassellenha**](https://instagram.com/vassellenha) &nbsp;·&nbsp; [**PORTFOLIO**](https://websiteportofoliokelompok5.vercel.app/)
+<a href="https://instagram.com/vassellenha"><img src="./assets/links/contact-03.gif" width="49%" alt="Instagram @vassellenha" /></a>
+<a href="https://websiteportofoliokelompok5.vercel.app/"><img src="./assets/links/contact-04.gif" width="49%" alt="Portfolio website" /></a>
 
-<br />
-
-<a href="https://github.com/vassellenha"><img src="./assets/motion/07-steal-the-show.gif" width="100%" alt="Animated steal the show comic-book-style closing title" /></a>
-
-<sub>CCELL.exe // THE PHANTOM DEVELOPER — FAN-INSPIRED ORIGINAL GRAPHIC DESIGN</sub>
-
-<br />
-
-<a href="#top">▲ BACK TO THE TOP / NEW GAME+</a>
+<a href="#top"><img src="./assets/motion/07-professional-finale.gif" width="100%" alt="Build with Purpose closing animation. Click to return to the top of the profile." /></a>
 
 </div>
